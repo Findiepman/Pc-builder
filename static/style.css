@@ -18,6 +18,9 @@
   --ink:        #12324e;
   --ink-soft:   #557595;
   --line:       #d5e7f7;
+  --line-strong: #8fb8de; /* darker outline used inside the build diagram,
+                              where the pale default --line all but disappears
+                              against the case's own pale-blue background */
   --danger:     #d4544a;
 
   --radius:    20px;
@@ -290,11 +293,12 @@ button { font-family: inherit; cursor: pointer; }
 .rig-case {
   position: relative;
   width: 100%;
-  max-width: 320px;
-  aspect-ratio: 3 / 4;
+  max-width: 460px;
+  aspect-ratio: 6 / 7; /* real mid-tower cases run close to square (height a bit
+                           more than depth), not the tall 3:4 box this used to be */
   margin: 0 auto;
   background: var(--paper);
-  border: 2px solid var(--line);
+  border: 2.5px solid var(--line-strong);
   border-radius: var(--radius);
   transition: border-color 0.2s, background 0.2s;
 }
@@ -316,7 +320,12 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--c-case);
 }
 
-/* every internal component shares this wrapper: shape on top, label below */
+/* every internal component shares this wrapper: shape on top, label below.
+   The shape starts fully see-through (just a dashed outline) so that
+   whatever is layered underneath it — chiefly the motherboard plate —
+   stays visible instead of getting visually "erased" by an opaque box.
+   Once a part is actually added, .filled makes it solid, which is also
+   the physically correct moment for it to start hiding what's behind it. */
 .rig-part {
   position: absolute;
   display: flex;
@@ -326,9 +335,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 .rig-part .rig-shape {
   flex: 1;
-  border: 2px dashed var(--line);
+  border: 2.5px dashed var(--line-strong);
   border-radius: 8px;
-  background: var(--cloud);
+  background: transparent;
   transition: border-color 0.2s, background 0.2s;
 }
 .rig-part .rig-label {
@@ -347,22 +356,128 @@ button { font-family: inherit; cursor: pointer; }
 }
 .rig-part.filled .rig-label { color: var(--ink); }
 
-/* laid out to actually match a real ATX tower seen from above with the side
-   panel off: motherboard tray mounted against the right wall, PSU shroud
-   spanning the bottom. Storage sits directly on the motherboard tray, like
-   an M.2 SSD mount, instead of floating off in its own box outside it. The
-   open area at the front-left (below the board, above the PSU) is left
-   blank on purpose, that's the case's own front bay space. */
-.rig-part[data-category="Motherboard"] { --cat: var(--c-mobo);   top: 6%;  left: 34%; width: 62%; height: 68%; z-index: 1; }
-.rig-part[data-category="PSU"]         { --cat: var(--c-psu);    top: 80%; left: 6%;  width: 90%; height: 14%; z-index: 1; }
+/* laid out like a real mid-tower ATX case with the side panel off, viewed
+   front-to-back: front of the case on the left, rear I/O on the right —
+   confirmed against motherboard-anatomy references (iFixit's board tour,
+   Tom's Hardware's connector guide) and case-interior references (Corsair's
+   5000D manual): rear I/O sits at the top of the back edge, the CPU socket
+   is inset from that edge with RAM immediately beside it toward the back,
+   the PCIe/M.2 area sits below the CPU, the GPU rides the same back edge
+   and reaches forward into the case, the PSU lives back-bottom (its shroud
+   does not span the full width), and drive cages are their own front-low
+   fixture, separate from the board entirely. Sizes are scaled off real
+   component dimensions against a ~460×535mm case interior:
+     motherboard  305 × 244mm  (ATX)              CPU socket   ~40 × 40mm
+     tower cooler ~100mm footprint                RAM DIMM     133 × 35mm
+     GPU          up to ~320mm long, ~55mm thick   PSU          150 × 86mm
+     M.2 stick    80 × 22mm, mounted flat on the board itself */
 
-.rig-part[data-category="CPU"]         { --cat: var(--c-cpu);    top: 16%; left: 54%; width: 22%; height: 15%; z-index: 2; }
-.rig-part[data-category="Cooler"]      { --cat: var(--c-cooler); top: 9%;  left: 55%; width: 20%; z-index: 3; }
+/* the board itself: a visible plate (not just an empty outline) so parts
+   sitting on top of it read as "mounted on the board" instead of looking
+   like holes punched in it. It keeps the dashed/solid empty-vs-added
+   convention everywhere else uses, just with its own tint underneath. */
+.rig-part[data-category="Motherboard"] {
+  --cat: var(--c-mobo);
+  top: 5%; left: 38%; width: 58%; height: 68%;
+  z-index: 1;
+  flex-direction: column-reverse; /* label pinned to the board's top edge,
+                                      clear of the parts mounted below it */
+}
+.rig-part[data-category="Motherboard"] .rig-shape {
+  position: relative;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--c-mobo) 9%, var(--cloud));
+}
+.rig-part[data-category="Motherboard"].filled .rig-shape {
+  background: color-mix(in srgb, var(--cat) 22%, white);
+}
+.rig-part[data-category="Motherboard"] .rig-label {
+  align-self: flex-start;
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-bottom: 2px;
+}
+
+/* PSU: back-bottom only — real ATX power supplies sit against the back
+   wall, they don't stretch the full width like the shroud covering them does. */
+.rig-part[data-category="PSU"]         { --cat: var(--c-psu);    top: 81%; left: 62%; width: 34%; height: 14%; z-index: 1; }
+
+/* CPU + tower cooler: drawn just above one another rather than literally
+   overlapping, so both stay individually legible; RAM stands beside them
+   toward the back edge, spanning roughly the same height as the CPU+cooler
+   stack, exactly where the DIMM slots sit next to the socket on a real board. */
+.rig-part[data-category="Cooler"]      { --cat: var(--c-cooler); top: 7%;  left: 55%; width: 20%; z-index: 3; }
 .rig-part[data-category="Cooler"] .rig-shape { border-radius: 50%; aspect-ratio: 1; flex: none; }
-.rig-part[data-category="RAM"]         { --cat: var(--c-ram);    top: 16%; left: 80%; width: 15%; height: 30%; z-index: 2; }
+.rig-part[data-category="CPU"]         { --cat: var(--c-cpu);    top: 29%; left: 59%; width: 11%; height: 8%; z-index: 2; }
+.rig-part[data-category="RAM"]         { --cat: var(--c-ram);    top: 9%;  left: 80%; width: 8%;  height: 36%; z-index: 2; }
 .rig-part[data-category="RAM"] .rig-shape { border-radius: 4px; }
-.rig-part[data-category="Storage"]     { --cat: var(--c-storage); top: 16%; left: 37%; width: 14%; height: 20%; z-index: 2; }
-.rig-part[data-category="GPU"]         { --cat: var(--c-gpu);    top: 50%; left: 40%; width: 50%; height: 14%; z-index: 2; }
+
+/* two M.2 slots, silkscreened onto the board itself between the CPU and
+   the PCIe slot below — right where they sit on a real board. Decorative
+   case detail, not a buildable part: an M.2 SSD you add still lives under
+   the Storage category/cage below. */
+.m2-slot {
+  position: absolute;
+  top: 44%; left: 42%; width: 15%; height: 4.5%;
+  border: 2px dashed color-mix(in srgb, var(--c-mobo) 65%, var(--line-strong));
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--c-mobo) 20%, white);
+}
+.m2-slot::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: -6%;
+  width: 10%; height: 40%;
+  transform: translateY(-50%);
+  background: color-mix(in srgb, var(--c-mobo) 65%, var(--line-strong));
+  border-radius: 2px;
+}
+.m2-slot.m2-slot-2 { top: 51.5%; }
+
+/* drive cage: front-left bay, low in the case, clear of the motherboard
+   footprint entirely — this is dedicated case space, not part of the board. */
+.rig-part[data-category="Storage"]     { --cat: var(--c-storage); top: 44%; left: 6%;  width: 17%; height: 30%; z-index: 2; }
+.rig-part[data-category="Storage"] .rig-shape { position: relative; overflow: hidden; background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.rig-part[data-category="Storage"] .rig-shape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent, transparent calc(33.333% - 1px),
+    rgba(18, 50, 78, 0.3) calc(33.333% - 1px), rgba(18, 50, 78, 0.3) 33.333%
+  );
+}
+
+/* GPU: seated in the board's PCIe slot, reaching forward off the board and
+   past its front edge into the case's open interior — right next to (not
+   on top of) the drive cage, the way a full-length card actually clears it. */
+.rig-part[data-category="GPU"]         { --cat: var(--c-gpu);    top: 58%; left: 26%; width: 70%; height: 13%; z-index: 2; }
+
+/* two static case-anatomy details: the rear I/O shield cutout at the
+   back-top of the case, and the row of expansion-slot brackets on the
+   back wall level with the GPU/PCIe slot — both fixed to the case itself,
+   not tied to any buildable category. */
+.io-shield {
+  position: absolute;
+  top: 2%; left: 80%; width: 14%; height: 3%;
+  background: var(--ink-soft);
+  opacity: 0.55;
+  border-radius: 2px;
+}
+.slot-brackets {
+  position: absolute;
+  top: 55%; left: 95%; width: 3%; height: 20%;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--ink-soft) 0, var(--ink-soft) 3px,
+    transparent 3px, transparent 7px
+  );
+  opacity: 0.6;
+}
 
 .rig-part .remove {
   position: absolute;

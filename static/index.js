@@ -32,21 +32,68 @@ let activeCategory = null;
 let selectedPart = null; // { category, part } currently shown in the details panel
 let configuration = {};  // { CPU: {...}, GPU: {...}, ... } — the actual build
 
-// TODO: on page load, fetch('/api/parts'), parse the JSON, store it in `parts`,
-// then render the first category's list. This is the one real GET this phase needs.
-async function loadParts() {}
+async function loadParts() {
+    const response = await fetch('/api/parts') 
+    if (!response.ok) {
+        console.error('parts request failed', response.status)
+        return;
+    }
+    const data = await response.json()
+    parts = data
+    activeCategory = Object.keys(parts)[0]
+    renderParts(activeCategory)
+    console.log(data)
 
-// TODO: given a category name, render its parts into #partsList as clickable cards.
-// Look at how the old game's renderCategoryParts() did this if you want a reference
-// for what data each part object carries (name, price, and category-specific specs).
-function renderParts(category) {}
 
+
+}
+
+
+
+function renderParts(category) {
+    partsList.innerHTML = "";
+    const displayList = parts[category]
+
+    displayList.forEach(part => {
+        const card = document.createElement("div");
+        card.className = "part-card"
+        card.innerHTML = `
+            <div class="name">${part.name}</div>
+            <div class="price">€${part.price}</div>
+        `;
+        card.addEventListener("click", () => {
+            selectedPart = { category: category, part: part }
+            showPartDetails(category, part)
+        })
+        partsList.appendChild(card)
+    })
+
+}
 // TODO: category button click -> set activeCategory, toggle .active class,
 // call renderParts() for the new category.
-function selectCategory(category) {}
+function selectCategory(category) {
+    activeCategory = category;
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === category);
+    });
+    renderParts(activeCategory)
+}   
+
+categoryButtons.addEventListener("click", (event) => {
+    const button = event.target.closest(".category-btn");
+    if (!button) return;
+    selectCategory(button.dataset.category)
+})
 
 // TODO: part card click -> set selectedPart, fill in #partDetails, show #addPartBtn.
-function showPartDetails(category, part) {}
+function showPartDetails(category, part) {
+    if (part.)
+    partDetails.innerHTML = `
+    <div class="detail-row"><span class="k">Name</span><span class="v">${part.name}</span></div>
+    <div class="detail-row"><span class="k">Price</span><span class="v">€${part.price}</span></div>
+
+`;
+}
 
 // TODO: "add to build" click -> put selectedPart into configuration[category],
 // then re-render the matching .rig-part inside #buildSlots (add .filled, set its
