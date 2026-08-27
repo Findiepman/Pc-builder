@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PC Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Hello world gang
+  <div class="shell">
+
+    <!-- ══ HUD ══ -->
+    <header class="hud">
+      <div>
+        <h1>PC Builder</h1>
+        <p class="goal" id="goalText">Goal: loading...</p>
+      </div>
+      <div class="hud-stats">
+        <div class="stat"><span class="label">Level</span><span class="value" id="levelValue">-</span></div>
+        <div class="stat"><span class="label">Budget</span><span class="value" id="budgetValue">€0</span></div>
+        <div class="stat total" id="totalStat"><span class="label">Total</span><span class="value" id="totalValue">€0</span></div>
+      </div>
+    </header>
+
+    <!-- ══ main game area ══ -->
+    <main class="game">
+
+      <!-- left: categories + parts list -->
+      <section class="panel" aria-labelledby="parts-heading">
+        <h2 id="parts-heading">Parts</h2>
+
+        <!-- category buttons: static markup, JS only needs to toggle .active
+             and read data-category to know which list to render -->
+        <div class="categories" id="categoryButtons">
+          <button class="category-btn" data-category="CPU"><span class="category-dot"></span>CPU</button>
+          <button class="category-btn" data-category="GPU"><span class="category-dot"></span>GPU</button>
+          <button class="category-btn" data-category="Motherboard"><span class="category-dot"></span>Motherboard</button>
+          <button class="category-btn" data-category="RAM"><span class="category-dot"></span>RAM</button>
+          <button class="category-btn" data-category="Storage"><span class="category-dot"></span>Storage</button>
+          <button class="category-btn" data-category="PSU"><span class="category-dot"></span>PSU</button>
+          <button class="category-btn" data-category="Case"><span class="category-dot"></span>Case</button>
+          <button class="category-btn" data-category="Cooler"><span class="category-dot"></span>Cooler</button>
+        </div>
+
+        <div class="sort-row">
+          <button class="btn-ghost" id="sortBtn">Sort by price</button>
+          <div class="sort-menu" id="sortMenu">
+            <button class="btn-ghost" id="sortAsc">Low → High</button>
+            <button class="btn-ghost" id="sortDesc">High → Low</button>
+          </div>
+        </div>
+
+        <!-- JS fills this in per active category, once GET /api/parts resolves -->
+        <div class="parts-list" id="partsList">
+          <p class="details-empty">Loading parts...</p>
+        </div>
+      </section>
+
+      <!-- center: the build, drawn as a simple flat diagram of a case interior
+           instead of a plain grid — motherboard as the base plate, CPU + RAM
+           sitting on it, GPU as a card below, storage + PSU at the bottom,
+           cooler as a fan on top, and the case itself is the outer shell. -->
+      <section class="panel" aria-labelledby="rig-heading">
+        <h2 id="rig-heading">Your Build</h2>
+        <div class="rig-case" id="buildSlots">
+          <span class="case-tag" id="caseTag">Case</span>
+
+          <div class="rig-part" data-category="Motherboard">
+            <div class="rig-shape"></div>
+            <span class="rig-label">Motherboard</span>
+          </div>
+          <div class="rig-part" data-category="CPU">
+            <div class="rig-shape"></div>
+            <span class="rig-label">CPU</span>
+          </div>
+          <div class="rig-part" data-category="Cooler">
+            <div class="rig-shape"></div>
+            <span class="rig-label">Cooler</span>
+          </div>
+          <div class="rig-part" data-category="RAM">
+            <div class="rig-shape"></div>
+            <span class="rig-label">RAM</span>
+          </div>
+          <div class="rig-part" data-category="GPU">
+            <div class="rig-shape"></div>
+            <span class="rig-label">GPU</span>
+          </div>
+          <div class="rig-part" data-category="Storage">
+            <div class="rig-shape"></div>
+            <span class="rig-label">Storage</span>
+          </div>
+          <div class="rig-part" data-category="PSU">
+            <div class="rig-shape"></div>
+            <span class="rig-label">PSU</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- right: whichever part is currently clicked -->
+      <aside class="panel" aria-labelledby="details-heading">
+        <h2 id="details-heading">Specs</h2>
+        <div id="partDetails">
+          <p class="details-empty">Click a part to see its details</p>
+        </div>
+        <button class="btn add-btn" id="addPartBtn" style="display:none;">Add to build</button>
+      </aside>
+    </main>
+
+    <!-- ══ footer controls ══ -->
+    <div class="footer-controls">
+      <button class="btn" id="checkBuildBtn">Check build</button>
+      <button class="btn-ghost" id="resetBtn">Reset</button>
+      <button class="btn-ghost" id="skipLevelBtn">Skip level</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

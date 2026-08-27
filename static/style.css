@@ -1,0 +1,408 @@
+/* ─────────────────────────────────────────────────────────
+   PC Builder — visual design
+   Palette + type lifted straight from Kivo's theme.css
+   ("clear sky": baby blue + white, big radii, soft shadows,
+   Bricolage Grotesque + Instrument Sans). The build panel is
+   drawn as a simple flat diagram of a case interior instead
+   of a plain grid, so it actually reads as a computer.
+   ───────────────────────────────────────────────────────── */
+
+:root {
+  --paper:      #f2f8fe;
+  --cloud:      #ffffff;
+  --baby:       #bfe0f7;
+  --baby-soft:  #e2f0fb;
+  --sky:        #4a9fde;
+  --deep:       #1b6fb8;
+  --deep-press: #155a97;
+  --ink:        #12324e;
+  --ink-soft:   #557595;
+  --line:       #d5e7f7;
+  --danger:     #d4544a;
+
+  --radius:    20px;
+  --radius-sm: 12px;
+  --shadow:      0 10px 30px rgba(27, 111, 184, 0.10);
+  --shadow-lift: 0 16px 40px rgba(27, 111, 184, 0.16);
+
+  /* one accent per part category, kept in the same soft/clear register as
+     Kivo's own status colors (planned/progress/finished/danger) */
+  --c-cpu:      #4a9fde; /* = --sky */
+  --c-gpu:      #3fa46a; /* = kivo "finished" green */
+  --c-mobo:     #1b6fb8; /* = --deep */
+  --c-ram:      #e59f35; /* = kivo "in progress" amber */
+  --c-storage:  #8b6fd6; /* violet, new but same softness */
+  --c-psu:      #d4544a; /* = --danger, power/energy read */
+  --c-case:     #557595; /* = --ink-soft, the shell itself */
+  --c-cooler:   #3fb8c0; /* teal, new but same softness */
+
+  --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  --font-body:    "Instrument Sans", -apple-system, "Segoe UI", sans-serif;
+}
+
+* , *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(900px 420px at 12% -8%, rgba(191, 224, 247, 0.55), transparent 65%),
+    radial-gradient(700px 380px at 88% -12%, rgba(191, 224, 247, 0.4), transparent 60%),
+    var(--paper);
+  background-attachment: fixed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--baby); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ── eyebrow label ── */
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--sky);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ── buttons, straight from Kivo's pill recipe ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.62rem 1.35rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--deep);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(27, 111, 184, 0.25);
+  transition: background 0.15s, transform 0.15s;
+}
+.btn:hover { background: var(--deep-press); transform: translateY(-1px); }
+.btn:disabled { opacity: 0.55; cursor: default; transform: none; }
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--cloud);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+.btn-ghost:hover { background: var(--baby-soft); border-color: var(--baby); }
+
+/* ── shell layout ── */
+.shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── HUD top bar ── */
+.hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 24px;
+}
+
+.hud h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--ink);
+}
+
+.hud .goal {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  max-width: 42ch;
+  margin-top: 2px;
+}
+
+.hud-stats { display: flex; gap: 26px; flex-wrap: wrap; }
+.stat { text-align: right; }
+.stat .label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.stat .value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.stat.total .value { color: var(--c-gpu); }
+.stat.total.close .value { color: var(--c-ram); }
+.stat.total.over .value { color: var(--danger); }
+
+/* ── main 3 column layout ── */
+.game {
+  display: grid;
+  grid-template-columns: 270px 1fr 300px;
+  gap: 18px;
+  align-items: start;
+}
+@media (max-width: 1000px) { .game { grid-template-columns: 1fr; } }
+
+.panel {
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.panel h2 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+/* ── category buttons, segmented-pill styled like Kivo's status toggle ── */
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.category-btn {
+  --cat: var(--sky);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.86rem;
+  text-align: left;
+}
+.category-btn:hover { border-color: var(--cat); color: var(--ink); }
+.category-btn.active {
+  background: color-mix(in srgb, var(--cat) 14%, white);
+  border-color: var(--cat);
+  color: var(--ink);
+}
+.category-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--cat); flex-shrink: 0;
+}
+.category-btn[data-category="CPU"]         { --cat: var(--c-cpu); }
+.category-btn[data-category="GPU"]         { --cat: var(--c-gpu); }
+.category-btn[data-category="Motherboard"] { --cat: var(--c-mobo); }
+.category-btn[data-category="RAM"]         { --cat: var(--c-ram); }
+.category-btn[data-category="Storage"]     { --cat: var(--c-storage); }
+.category-btn[data-category="PSU"]         { --cat: var(--c-psu); }
+.category-btn[data-category="Case"]        { --cat: var(--c-case); }
+.category-btn[data-category="Cooler"]      { --cat: var(--c-cooler); }
+
+/* ── sort control ── */
+.sort-row { position: relative; margin-bottom: 12px; }
+.sort-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 5;
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lift);
+  padding: 6px;
+  flex-direction: column;
+  gap: 4px;
+}
+.sort-menu.open { display: flex; }
+
+/* ── parts list ── */
+.parts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.part-card {
+  --cat: var(--sky);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+.part-card:hover { border-color: var(--cat); }
+.part-card.selected { background: color-mix(in srgb, var(--cat) 14%, white); border-color: var(--cat); }
+.part-card .name { font-size: 0.85rem; font-weight: 600; color: var(--ink); flex: 1; }
+.part-card .price {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--cat);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ═════════════════════════════════════════════════════════
+   the build panel: a simple flat diagram of a case interior
+   ═════════════════════════════════════════════════════════ */
+
+.rig-case {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s, background 0.2s;
+}
+.rig-case.filled {
+  border-color: var(--c-case);
+  background: color-mix(in srgb, var(--c-case) 8%, var(--paper));
+}
+
+.case-tag {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--c-case);
+}
+
+/* every internal component shares this wrapper: shape on top, label below */
+.rig-part {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 3px;
+}
+.rig-part .rig-shape {
+  flex: 1;
+  border: 2px dashed var(--line);
+  border-radius: 8px;
+  background: var(--cloud);
+  transition: border-color 0.2s, background 0.2s;
+}
+.rig-part .rig-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rig-part.filled .rig-shape {
+  border-style: solid;
+  border-color: var(--cat);
+  background: color-mix(in srgb, var(--cat) 22%, white);
+}
+.rig-part.filled .rig-label { color: var(--ink); }
+
+/* laid out to actually match a real ATX tower seen from above with the side
+   panel off: motherboard tray mounted against the right wall, PSU shroud
+   spanning the bottom. Storage sits directly on the motherboard tray, like
+   an M.2 SSD mount, instead of floating off in its own box outside it. The
+   open area at the front-left (below the board, above the PSU) is left
+   blank on purpose, that's the case's own front bay space. */
+.rig-part[data-category="Motherboard"] { --cat: var(--c-mobo);   top: 6%;  left: 34%; width: 62%; height: 68%; z-index: 1; }
+.rig-part[data-category="PSU"]         { --cat: var(--c-psu);    top: 80%; left: 6%;  width: 90%; height: 14%; z-index: 1; }
+
+.rig-part[data-category="CPU"]         { --cat: var(--c-cpu);    top: 16%; left: 54%; width: 22%; height: 15%; z-index: 2; }
+.rig-part[data-category="Cooler"]      { --cat: var(--c-cooler); top: 9%;  left: 55%; width: 20%; z-index: 3; }
+.rig-part[data-category="Cooler"] .rig-shape { border-radius: 50%; aspect-ratio: 1; flex: none; }
+.rig-part[data-category="RAM"]         { --cat: var(--c-ram);    top: 16%; left: 80%; width: 15%; height: 30%; z-index: 2; }
+.rig-part[data-category="RAM"] .rig-shape { border-radius: 4px; }
+.rig-part[data-category="Storage"]     { --cat: var(--c-storage); top: 16%; left: 37%; width: 14%; height: 20%; z-index: 2; }
+.rig-part[data-category="GPU"]         { --cat: var(--c-gpu);    top: 50%; left: 40%; width: 50%; height: 14%; z-index: 2; }
+
+.rig-part .remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  font-size: 0.65rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  z-index: 5;
+}
+.rig-part .remove:hover { color: var(--danger); border-color: var(--danger); }
+
+/* ── details / info panel ── */
+.details-empty { color: var(--ink-soft); font-size: 0.85rem; font-style: italic; }
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.84rem;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+.detail-row .k { color: var(--ink-soft); }
+.detail-row .v { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.add-btn { width: 100%; margin-top: 14px; }
+
+/* ── footer controls ── */
+.footer-controls { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ── scrollbar ── */
+.parts-list::-webkit-scrollbar { width: 8px; }
+.parts-list::-webkit-scrollbar-track { background: transparent; }
+.parts-list::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
