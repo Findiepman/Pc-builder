@@ -87,12 +87,28 @@ categoryButtons.addEventListener("click", (event) => {
 
 // TODO: part card click -> set selectedPart, fill in #partDetails, show #addPartBtn.
 function showPartDetails(category, part) {
-    if (part.)
-    partDetails.innerHTML = `
-    <div class="detail-row"><span class="k">Name</span><span class="v">${part.name}</span></div>
-    <div class="detail-row"><span class="k">Price</span><span class="v">€${part.price}</span></div>
 
-`;
+    let html = `<div class="detail-row"><span class="k">Name</span><span class="v">${part.name}</span></div>`
+    html += `<div class="detail-row"><span class="k">Price</span><span class="v">$${part.price}</span></div>`
+    if (part.clock) html += `<div class="detail-row"><span class="k">Clock Speed</span><span class="v">${part.clock}</span></div>`
+    if (part.cores) html += `<div class="detail-row"><span class="k">Cores</span><span class="v">${part.cores} Cores</span></div>`
+    if (part.threads) html += `<div class="detail-row"><span class="k">Threads</span><span class="v">${part.threads} Threads</span></div>`
+    if (part.socket) html += `<div class="detail-row"><span class="k">Socket</span><span class="v">${part.socket}</span></div>`
+    if (part.form) html += `<div class="detail-row"><span class="k">Form</span><span class="v">${part.form}</span></div>`
+    if (part.watt) html += `<div class="detail-row"><span class="k">Watt</span><span class="v">${part.watt}</span></div>`
+    if (part.speed) html += `<div class="detail-row"><span class="k">Speed</span><span class="v">${part.speed}</span></div>`
+    if (part.type) html += `<div class="detail-row"><span class="k">Type</span><span class="v">${part.type}</span></div>`
+    if (part.memory) html += `<div class="detail-row"><span class="k">Vram</span><span class="v">${part.memory}</span></div>`
+    if (part.read) html += `<div class="detail-row"><span class="k">Read Speed</span><span class="v">${part.read}</span></div>`
+    if (part.write) html += `<div class="detail-row"><span class="k">Write Speed</span><span class="v">${part.write}</span></div>`
+    if (part.rating) html += `<div class="detail-row"><span class="k">Rating</span><span class="v">${part.rating}</span></div>`
+    if (part.rpm) html += `<div class="detail-row"><span class="k">RPM</span><span class="v">${part.rpm}</span></div>`
+
+
+    if (part.img) {
+        html += `<img src="${part.img}" alt="${part.name}" style="width:100%; margin-top:8px; border-radius:6px;">`
+    }
+    partDetails.innerHTML = html;
 }
 
 // TODO: "add to build" click -> put selectedPart into configuration[category],
