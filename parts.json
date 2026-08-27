@@ -1,0 +1,1142 @@
+{
+  "CPU": [
+    {
+      "name": "Intel i3-12100",
+      "price": 100,
+      "clock": "3.3GHz",
+      "cores": 4,
+      "threads": 8,
+      "img": "https://www.alternate.nl/p/600x600/5/2/Intel__Core_i3_12100__3_3_GHz__4_3_GHz_Turbo_Boost__socket_1700_processor@@1778325.jpg"
+    },
+    {
+      "name": "Intel i3-13100",
+      "price": 120,
+      "clock": "3.4GHz",
+      "cores": 4,
+      "threads": 8,
+      "img": "https://www.alternate.nl/p/200x200/5/2/Intel__Core_i3_12100__3_3_GHz__4_3_GHz_Turbo_Boost__socket_1700_processor@@1778325.jpg"
+    },
+    {
+      "name": "AMD Ryzen 3 4100",
+      "price": 110,
+      "clock": "3.6GHz",
+      "cores": 4,
+      "threads": 8,
+      "img": "https://www.alternate.nl/p/200x200/6/3/AMD_Ryzen_3_4100__3_8_GHz__4_0_GHz_Turbo_Boost__socket_AM4_processor@@1831236_30.jpg"
+    },
+    {
+      "name": "AMD Ryzen 5 4500",
+      "price": 150,
+      "clock": "3.6GHz",
+      "cores": 6,
+      "threads": 12,
+      "img": "https://www.alternate.nl/p/200x200/1/3/AMD_Ryzen_5_4500__3_6_GHz__4_1_GHz_Turbo_Boost__socket_AM4_processor@@1831231_30.jpg"
+    },
+    {
+      "name": "Intel i5-10400",
+      "price": 160,
+      "clock": "3.4GHz",
+      "cores": 6,
+      "threads": 12,
+      "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSPwdq7-KoO3WId-c6GBhS21t3eD_dLtU5rmnktKNxJHW8Kx0jSlz1YD04QXN3A6MSajIPYa2t7yQ_pfg_5wMpiivh5wrt0Rtdcyky2zSw_txiCqBYOO5H4VvPoSIGzjaVBTHquug&usqp=CAc"
+    },
+    {
+      "name": "Intel i5-11400",
+      "price": 170,
+      "clock": "3.6GHz",
+      "cores": 6,
+      "threads": 12,
+      "img": "https://www.alternate.nl/p/200x200/7/3/Intel__Core_i5_12400F__2_5_GHz__4_4_GHz_Turbo_Boost__socket_1700_processor@@1778337.jpg"
+    },
+    {
+      "name": "AMD Ryzen 5 5600X",
+      "price": 200,
+      "clock": "3.7GHz",
+      "cores": 6,
+      "threads": 12,
+      "img": "https://www.alternate.nl/p/200x200/6/8/AMD_Ryzen_5_5600XT__3_7_GHz__4_6_GHz_Turbo_Boost__socket_AM4_processor@@100093986.jpg"
+    },
+    {
+      "name": "Intel i5-12400",
+      "price": 180,
+      "clock": "3.6GHz",
+      "cores": 6,
+      "threads": 12,
+      "img": "https://www.alternate.nl/p/200x200/7/3/Intel__Core_i5_12400F__2_5_GHz__4_4_GHz_Turbo_Boost__socket_1700_processor@@1778337.jpg"
+    },
+    {
+      "name": "AMD Ryzen 7 5700X",
+      "price": 250,
+      "clock": "3.4GHz",
+      "cores": 8,
+      "threads": 16,
+      "img": "https://www.alternate.nl/p/200x200/8/6/AMD_Ryzen_7_5700X__3_4_GHz__4_6_GHz_Turbo_Boost__socket_AM4_processor@@1831268.jpg"
+    },
+    {
+      "name": "Intel i7-10700",
+      "price": 300,
+      "clock": "2.9GHz",
+      "cores": 8,
+      "threads": 16,
+      "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR5XuhiVlv8gvntfDcPpThsSVwxlwMFaQqg0qfsuqi8-1GCeabBZ5kvObMbQtekL_UCPaZV8n2am-EGYh6IgDv9_DHSIx5o6AYi5dNFRHSYaddcUAagfFXI_sU8Lpsi&usqp=CAc"
+    },
+    {
+      "name": "AMD Ryzen 5 3600",
+      "price": 160,
+      "clock": "3.6GHz",
+      "cores": 6,
+      "threads": 12,
+      "img": "https://www.alternate.nl/p/200x200/3/6/AMD_Ryzen_5_3600__3_6_GHz__4_2_GHz_Turbo_Boost__socket_AM4_processor@@1930563_30.jpg"
+    },
+    {
+      "name": "Intel i5-10600K",
+      "price": 200,
+      "clock": "4.1GHz",
+      "cores": 6,
+      "threads": 12,
+      "img": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTwejtyp2V45QmhRfwc5XGOPt1FX2OXnjGFoYgGu1YmnMM2zBiTEFdZ1oXLb0FTTuC5UCqZjyrhW-gye7OGhro9Xd2-fA6M2PCTV1gPfmw9TITMjgjWXOtFC_L-lDAd3Q&usqp=CAc"
+    },
+    {
+      "name": "AMD Ryzen 3 3300X",
+      "price": 120,
+      "clock": "3.8GHz",
+      "cores": 4,
+      "threads": 8,
+      "img": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQLuKBD2p_r8OJWZokgAVNUeSdwACZUKJayB_M1PxKv5LPQ8JmCszchnbSNWbtirtaGQW0NzfX75EGFz_HVWytrcVCtSw2eUknj5bXozxGJgPOpRPvdtmm2GAJLcPd5ExVFDGB1mw&usqp=CAc"
+    },
+    {
+      "name": "Intel i3-10100",
+      "price": 95,
+      "clock": "3.6GHz",
+      "cores": 4,
+      "threads": 8,
+      "img": "data:image/jpeg;base64,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"
+    },
+    {
+      "name": "AMD Ryzen 5 3400G",
+      "price": 140,
+      "clock": "3.7GHz",
+      "cores": 4,
+      "threads": 8,
+      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRUXFRUYFRgVFxUYFRUVFxUXFxUVFhUYHSggGBolHRUVITEhJSkrLi4uGB8zODMsNygtLisBCgoKDg0OFxAPFysdHR4vLS0tKzAtLSsuNzcrNystLS01LS0tLSstLSsuNy43Ly0tKysrLSstKysrLS0rLS0tLf/AABEIANIA8AMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAAAgMEBQEGCAf/xABLEAABAwEEBAgJCQgBAwUAAAABAAIDEQQSITEFQVHwBgciYXGBkbETIzI1QnKhwdEzUnOSsrPC4fEUQ0RUYoKT0qJTlOIVJFVjg//EABoBAQEAAwEBAAAAAAAAAAAAAAABAgQFAwb/xAApEQEAAgICAQMCBgMAAAAAAAAAAQIDEQQhMRITQWHBBTKBkaHwIjNR/9oADAMBAAIRAxEAPwD3FC07ja0rNZdGTT2eQxytdEGuABIvSsacwRkSufjxnaX/AJ6Tsj/1V0OskLkt3GVpc/x0v/AfhTZ4xdLH+Pn+sPgmh1whchu4faVP8faeqRw7k27hxpT/AOQtX+aT4podgIXHbuGWkjnpC2f9xN/skHhbpH+ftf8A3E3+yaHY6FxseFVv/nrV/nm/2STwmt387af88v8Asmh2WhcYnhDbP5u0f5pf9kk6etf81P8A5ZP9k0O0FioXFx0zaTnaJv8AI/4pB0pP/wBeX/I/4podp3xtCx4Ru0doXFR0hMf3sn13fFJNrkP7x/1nfFNDtfwzfnDtCU1wORBXEbpXa3E9ZXuXFy8iwQEE15eIJr5Z1poe1oWhQ6SmblK/rJPepsXCCcZlrulvwomhuCFrcXCV3pRjqNO9S4+EURza4dQPvUFyhQGaYgP7wDpqO9SorSx3kvaeggoHUIQgEIQgEIQg0Hjy8zWj1oPv2Ll1dRcefma0etB98xcurKAIQhVAhYQgzVCcigc7IdepWNl0MS4B7rldodj0UBJUFUsK9t+iI2ta6N5c04VpQhw2t2HMKqdZH1y61RHWU/8Asb+btR+xv5u1QMITpszx6JTbmkZgjpVGEIQgCvc+LrzfB/f9srwxe58XXm+D+/7ZSRsPh2h4ZeF8guDa8otBoSBsxTsTwQCCCDkQQQegjNatahKLZ+0eCNxkscV6pqYy0h1GUxbflBvA+gqaOwSRwRPfISww2nwbDhcLoXukr/cMOYrFXo4SqLSXzWYh0AlcYHywtZI2TCGUsc6S7KSQAGtGG19NavOCbSIXNL3PuzTNDnm84ta8huPQiLeRR5FIeo8iBLbbKzyZHjocVZWPTtoGclfWDT7lTPCkWZBtVn09J6TWnoqEs8J2jyo3DoIPwWsWRtoFKua4YVyByZXZr8IexRLdPKM464att0kjXrAHX0VDdGcLbL6Ty31mu7xVWNg0pDPXwUrX0pW6cRXKo1LyG3T0Lhddyde0XQajtp1LZeK35W0epH3vUU/x5eZ7R60H3zFy6V1Fx5+Z5/Wg++YuXSsoAhCwVUCvtHaELmF4o4g0u5VoATTVrGao44y40CuJrZdZcJwreujWaUqVBc3oYTyQ6pAcHOoTGRXklvrVBB1KBadOBp8XeFH3xV18h1CKCuAGJ6VRyzufh7BvisssxOeCB+1aUe9xccSdZ+AUZ1redakNszRqr0p1rBsCCv8ADu+cVkTu+ce1WAQSNaCE21P216aJ1tt2iqkeDadQSHWRp5uhAjxTtVD2fkkSWI+ia77Vl9jIyx700x7m7RzFAy9hGBFF7nxd+b4P7/tleNMtDXYOAHd26l7PwELWWGFt4enmRXyyqNjCzdBzFelIa4HWE41YiNatGQyta2SJrmtdeApQB1KVoOlTGMArQUqamms7fYENSggTIo0ikvUeRBFepFmTD0/ZkD1lErWNGJIcC7GvIAF4VOdf0UW3SuBdj6QGIoBVxGBwrhQ9al2eSYNBuk+JeSDSplFLrcKDHlZKLb5nivJw8XTOvK8uvMMPapp7+9Ez3WFPbX577fgtj4rh420erH3vWtW6bPDU457HU36Vs3Fb8paPVj73owtasxGo0c48/M8/rwffMXLy6h48/M8/rwffMXLyyhgwUqNhcaBJVjZWXG3jmdwERl7hE2gxJ3qVGZEXYnt2pcURcbzv1Tsz6IBrAMlgyjpTR5WR6tf5pokjNA+ZSklx2psOReQLqsxnGh14JuqKoF3i00qno7Si0NqK9ah1ogtI52nm6Ut7AcCKqua5OxSkZdiAnsRGLcebWvQODr6WWHmac/WK0qKYO6VvOjfkIvUP2jv79SgmXveN9+xKbM4ZOcOgkcx37kzXZs9o3/RYrvvv3IJTbdKMpHj+53dv7k8zSs//AFXdZr39O+qvG++/wfYN99/eFkzS8+t/sb8N6J7/ANVk1lvYq1p336vZzLBdv+nVvRFWD9LO2N7D8d+5UWnyP3YPQSqZ7999/emqQjaoOFQ1xHqd+SxLpxjvQcOxayxSY0FhPMHZV61tPFhEQ+0E6xH3vWnRreeLjOboj/Egjcenmef14PvmLl9dQ8enmef14Pvmrl5WFO2WO84DrKm2nlODQm9GNzPV8U5GcztKIW9waO5QZHVTkz6lMkqBKdZKDg/t19aaWFQ5LEWpIKds8leSRUdycbAOlBHWFMDQgsGxBmLFg6PeoUoxU5mGGpRbQMUDTHJ0FMJbSgeBXoeh3f8AtoST6J9jiF52wVwC9B0ZhZ4R/QftH8/yUEwv+PWNW/syOB7Nxvu1NA/HoOzenUM3Wj9NewjcdXooHW77+3qzwqH2777+5Mt33394W01w3335hJmIjcsq1m0xEfKXZor55tfwG/53NliDchT39J1qBZhQJm06ZDTRgrTMnsw+P6riZrZeTfVPDuVx4uJSJv5bCYWuFHNBHOKrXdL6L8Fy24sJ62k6jzc6Xo7T5BpJ5J9LWOnaFsb2NkYRgWuGrYdYK8K2z8PJHr8T+zC8YuVSfT5hpjFIjTDoy1xacwSD1dKejK+jiYmNw4kxqdSlRreuLgYzHmj/ABrQ2Fb5xbfv/wD8/wASCLx6eZ5vXh+9auX11Bx6+Z5vXg+9auXwrCrGxfJk9KSTQJdjHi/rJmU4IhpxSVm6TqS2xu+b7EDLq7FhrKqTR3zT1UQBiMTnkRRA5EygoloQgEJ1sB14b4JV3KgFMnc23FA22PaQE3IzUU7yfbhzpBcTmgr5GUNFgBS546jnCcstnpic+5BmzQ0FTmfYt2sJ8TD6uFPWNPbXfEaeVt1iHiYvUP2jvvRBJZv05jf83J5u+wbjfayD+fPtPdir/gmLEXv/AG51GBouYvFXXsfIxyUFQX779G+pyzGpW/WOzaClkbFHVz3mjRW0ip1YmgH6Kn4N6JhfLa7G4VlaX+Aeag1jcQRTLU32rwzxM09MfLd4Ooyeu0bivf2/hr1vtV0XBrz6NnXRVt5bTZbDHFY7Ta7RG0vdIYLO14rR4qHPA2ijv8ZT2gdO6MjgjZNY/CzAEOcI4zeJcaYl2OBp1JgxxSkQ8+XlnLlmfj4agCtp4KWurXRk4g3h0HP296tOMNtlhbZ2RwMikLhLIxrWBwjoRdeW4Gpwpjl2zdFcMrI+QMisDWEg4gRDIV9FvN7FhzMVcuKaz19U42SaZImO2qafbSavzgD7vcosZXoNgbDNaZjIxrWOgc0ggcmr2NwNMM1r9nsJgi0jE+l6MQNrt8bgR0gjtV4k7w1738fsnJjWWfhTsK37i0yn6Y/xLz6Mr0Dizyn6Y+5y2XhCLx6+Z5vpIfvWrmBdP8evmeb6SH71q5gKQq1sA8WOlw7j71HeKV5k/ovGN3M6vsWLQzGoFa96qIk8zsgT1fkpVkhoKnH8qOHsJUaCLlVd09hGHepsjqYbMOzI9iDEhHNvkmH6unvwWSUgnA9CB5Ph4uiuOeHv5lHYaivb0rKBcj64DVt2bCkOJOaEIBCEIMtHce5OtKYkdRhO3AdaeCDJW22L5GL1PxHfrWokrabK7xMXqfiKgk3/AMjzb61tHALRlmtD5zaQTHFEH4Oc27Qmp5OJFNS04v3962XgTpSGFlt8LIGGSzOZHWvKeb2GHSFBvuhINDC/abM0vdZx4RxBnLmih5TWuPKyK8+sOmnC1m1NwJmdJTmc8ktr0EhI4C6fbY7SHy18E9jo5RSpunEG6M8QOolVziwSP8ESY77rhIum7Xk1Go0ovDkR/i6f4Xqcs1n5iW4cbGkS6eOBoDY2RiQDa+UkknqHtKZ4D6PZEx+krQD4KHCFuuSbIXRroaDp6CqbhrpZlqtIlY1zW+CjbyqVq2tTgcsVfaE4xP2azRwCzB/g20vF9K4k1oGnavaJ3G4c+9Jraaz1MNfltcs9qE8oN58rCcDd8oUaCdQGC9QtnCa1ttToI7E50bXEeEuyUIu1rg2meGa0HhJw0ktgiBiYwRSCRtCXVIGRrqV1o3jAtkzyCIWtAryWOzrQYl551hltFaTM9MsVJveKxG03SEzn/trntuPNldUZU5bNvQnbRbG2jRstpr40shim53Ryi67DaHV6+ZappvTUxll5XyrA2SgHKBNac2rJV0Fse1jow8hj7t9up101bUcxWHGjWKP75Zcn/ZP0+x9jl6HxYHkz+szucvOI3L0biu8if1mdxWw8IR+PbzPN9JD961cwLp7j28zzfSQ/eNXMkPlDpCQqz0TGQHV10Pf8U8QkWat7qO/sTj8CqiulJrisByk2mKuIUQCuSBVUlwOvAd6WSG85SWiuJyCBuCUtNe0bVMbR2Lew5qDfxqsoJpWKqKLU4c/SnG2s7AgfCHUGLuxMPtL+YKMXE4lA7PLeI2agpQlCbs7NZUnBA0ZFs9nf4mH1PxFa9dGwdiv60ji9T3lSQov3396AU1e33ySgf0UDgO/uT0JTA33Pf+aW12v9Bzd6xvX1VmGxxc3s5a3/AOLG7fHd0qI0p2GWimNax2JC1KZfb6l2+bwIz6yY5jtBaVsGiW3GFxwJxPqjL39qqXQNDwBlStPd0ZJ+2WyouA4YVp3K5t5oilfE+XOw0jjza9/MdQRJMXOLjrO4S2FRGlPMK3IjUahzpmZncpjCvSeKvyJ/WZ9krzFrl6bxTnxc/rs+yVUgzx7+Z5fpIfvAuYQV09x7+aJfpIfvAuYVYVZWSUlzdh/RTJgq+ztNwOA8lxyzGR7FZTIhkO1JieIjFvWPgnHLLX7UFcwVS7QaADrKmPgBxH6qFaAbxqEDAS0iiyUCc06yM6gkwhTIxRBEkKzZY6lP2uCuI61Gs8lCgsQ1YqssfVZIVACr1x5EXqe8qgCvT8nF9H7zvipIGnfff2JTdzvv70N3366dfPg4Bvvv7FiFjffalA775pDez39mZ32JQOvcdO+tFOsfTP8AQ760+y0U1qIO7fHm5ksFed8VbTuW9g/Ec2GnojuPqkOnJJP60GqqwCmgUoFZxWI8NO97Xndp2faU60qO0p1pVYJLXL1Hil+Rn+kb9heVtK9T4o/kZ/pG/YCob49/NEv0kP3gXNmj7A6Z9xlL1CQCaVxApXbiuk+PfzRL9JD94FzfoqGN76SS+CFDR2x1RQHqr2KwqzsNjniDg6MllcS0g0IAJ11pQhZnBzIc3EjlAg1GeakT2WZkbnMtjXMAF6tCMQGmhF6uoFWNhnt7XVfG2UlvlDM0NKUFK5agg1xyQ4K+mtbKkTWU1LmOrXlUBYCMsiGEdZUU2mwucRdezMUq40dezJqaCldXxRFU15CcBDsD2KxmsFnLmBk/l3qk3XBl0V5RFM64YailWjg7I08l8bhjQ1IrjTDAjWNaCklsfzT2/FRZInNzCu5NGTtpVhNQSKEHAEA664FwTDw5vlNc3pBGHWgrIFKanaNOxZ8GFQlpUa02XW3rCl+DWQ1BXwS6lLa9KfZ2k1ISg0DYFAkBXrhyIvU95pj1Hs2BUZkCva1ZFq5HvPwGfcFJCW82/bjrr17SUoc2O+HeD+oSbu32d1Osjq2k0WMd986+3nFIM1278/P+fQlZb5a9/wBUkdu+fPn7efDI35taKUN/yWRvT3JPd7O3asg7/HYgcG/vSgU0Dv3dCUCgeDlP0bZTK6laACpNOxVoctv0BZbjG1HKcQT28kdneVrcrN7VOvM9Q3ODx/eyd+I7k9ZuDDiC7wcjgASTQhoAxJyW+cW8LWRShooPCDtuhGnTb3eGDQBCA7K5VzKY51J17E7xefJSeuPshauK1/fiJmZ8+em3mrjnjWtWtY7jx3P6qjj380S/SQ/eBc3aNmjY+srL7CCCMK5jEE5HArrbhrwaZpGyusr3uY1zmuvNoSC01GBXjukuIa0NqYLXG/YJGOZ0AlpcupDkPPrQywPaSwyRvAcQD5DjjQZGmrWFLjsT6gw20+jQF96jjkDR1MMBkpekeKzS0P8ADeEG2J7Heyod7Fq1u0VPCaTQSR+uxze8Kjco4rY01a1j8BeIwqHOJzJFDUOPNUqvbbXguM1iDmOIdUM1Ua0YnVQV6SqPRFvex/JkcK7Cc8xgrWDS87A2rg67UAOANG8rk9negkMnsDwA5j43bW5DqBNewLLbDDepDay0Y4ucBgADi0UNcT9VJh042ga+Bjm6xXPHXeB2kdBSfD2JwF6JzDeNSC48kuJAAa7MAjHmCgmu0faw4ls4lDBmS7Frm3jQGtQbo144FIk0pa4KmWJhBdyiQPKrUA3TQeQTSm1MR2CBx8VaC00qDeH9Ru05JqAGY11nYommo5YyI3ymRpAcDjdJF5oIJrWmPaqiLpK1CV98NuVA5IyBGzDJRkIQF47Vm8dpWEICqELIQC2Cni4q/M/EccTTUfqjUCqAK/8A3cXqc/zsufUM/Sp85SRgED88e/pp/ftcaLpt3+OYHXzilrZdFxlkbnWgB0l2jLvKAdLcvVqbzc3A4V/uU+16Ns8UTi8XJaMLWueXEePka9pGF5wZdOQzO0UitcaKmgxJwFMTXYNuY7efCZBoqd1AI3CpAqRdzoR5VNoPRjqK2E6fs7Q5sUbmkl4Hg2NFQ55u0pTIEPplWmVcGYbbaXnxVndgK8s4UIjJ5NG18ius8snMmoUFtsbonXXgA3QcDUUOOeo5piu/x2qdphst4OmcHOIpUAUFygumgAqAe7UoA3/VAqu/x5kuqbB331rIO++SCy0NZfCSAHIYu6BTDrK3GOtRTOop01wVVwfstyO8c34nmHoj39aubPZpHnkMc7oB71weZlnLl1XuIfUcDDGHBu3U277/AIbeLNaow6a1WgXRG/kXjiS0gYAAVr0p7i8PipPX/CFSQcGLVKb0hpzvJcVt3BzQv7M0i9eJNThTUtzj0vOStprMRG/M99udyr4q4bUi8TadeI1HS6QhC6TkMFoTctna4UcARsOI7E6hBrWkeAmjpzWSyQl3zgwNd9ZtCta0nxN2GTGN80R/pcHDseD3r0pCDwnSvElaBUwWpjtgla5tcPnNvdy1fSHFnpSH+G8INsT2u9hofYunlgtCuxx9a9GTw1E0Esf0kb2jtIooTTs9i7JkszXYEAjnVDpPgPo+fGSyQk7bjWu+s2hTY5UQugdI8S9gfUxmaI/0vLh2PB71q2keJCdtTDamOGoSMLT9ZpI9iI8nQtw0jxZaUh/hxINsT2H/AIuId7Frdv0XPB8tDJHzvY4D6xFEERZCS0g5JSoyAr/93Fl5H4jq15+wD0lQK/PycWPoZVwzNdYp/wCTjmQoL6LQr3xxSTT0a5jGx67jCSA1xwAoDjQHM0zFF2WzWGMVfIJHY1bynVIfKD5AAxAYRjTqotecSQAXEgbTlnWlK0pyzhlT+gIwrSmOymOylK81Oa6fmhRV9atMx+LEEVwNeHONGtMjaDkG5qJFa/FR7Tp+d1A0iMDK4P6QwVOJODR2VzqndHcFLbP5Fnfd2vFwdPKI26hkDzLbdGcVEzqGaZrNoYC4/WNAOwoPPJ53vNXOc45VJJ6u5FngfIaRsc85ANBceoNXuOi+LOwxULmGQ/8A2Go+qKN9i2qx6KhiAbHG1oGprQB2BB4Ro3gDb5v3Xgwdcpofqip9i27RXFKMDaJycuTGAB0FzqkjqC9UDQEpBR2LgxZ4/QBO12PeraOztbgAAnkLGtK1/LGmd8l7/mnbACyhCyYBCEIBCEIBCEIBCEIBCEIBCEIElgTb7K04EJ5CDW9J8CLBP8rZYXHbcAd9YUPtWraS4m7A+vg/CxH+h5I7H1XpqEHhlv4lZW/I2kO5pGEH6zSe5LsfFZbHBjZJImXWBpLbziTUkluDdtcdYb81e4URRB5vovinsrKGUvkOwktbnXBoxpg0Z+iFt+i+DNms4pFCxnqtAPbmVcoQIbEBkEtCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEAhCEH//2Q=="
+    },
+    {
+      "name": "Intel i7-12700K",
+      "price": 400,
+      "clock": "3.6GHz",
+      "cores": 12,
+      "threads": 20,
+      "img": "https://www.alternate.nl/p/200x200/9/5/Intel__Core_i7_12700K__3_6_GHz__5_0_GHz_Turbo_Boost__socket_1700_processor@@1778359.jpg"
+    },
+    {
+      "name": "Intel i9-12900K",
+      "price": 600,
+      "clock": "3.2GHz",
+      "cores": 16,
+      "threads": 24,
+      "img": "https://www.alternate.nl/p/200x200/6/0/Intel__Core_i9_12900KS__3_2_GHz__5_5_GHz_Turbo_Boost__socket_1700_processor@@1818206.jpg"
+    },
+    {
+      "name": "AMD Ryzen 9 5900X",
+      "price": 550,
+      "clock": "3.7GHz",
+      "cores": 12,
+      "threads": 24,
+      "img": "https://www.alternate.nl/p/200x200/6/0/AMD_Ryzen_9_5900XT__3_3_GHz__4_8_GHz_Turbo_Boost__socket_AM4_processor@@100065806_30.jpg"
+    },
+    {
+      "name": "AMD Ryzen 9 5950X",
+      "price": 700,
+      "clock": "3.4GHz",
+      "cores": 16,
+      "threads": 32,
+      "img": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSHA9rMrdTMI0BQ1UaPFxdbsJmX257i6oTQp4HCglnLEX6UozTs_rTSnYLiZhdlKtBSjDbuG5z1jC1Z5dVEy4Og_cj-MLaKzVEs5nAWWpw_-qedrw5JttAiXbxA_w&usqp=CAc"
+    },
+    {
+      "name": "Intel i9-13900K",
+      "price": 750,
+      "clock": "3.0GHz",
+      "cores": 24,
+      "threads": 32,
+      "img": "data:image/webp;base64,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"
+    }
+  ],
+  "GPU": [
+    {
+      "name": "Geen GPU",
+      "price": 0
+    },
+    {
+      "name": "GTX 1050",
+      "price": 120,
+      "memory": "2GB",
+      "clock": "1354MHz",
+      "img": ""
+    },
+    {
+      "name": "GTX 1650",
+      "price": 150,
+      "memory": "4GB",
+      "clock": "1485MHz",
+      "img": ""
+    },
+    {
+      "name": "GTX 1650 Super",
+      "price": 180,
+      "memory": "4GB",
+      "clock": "1530MHz",
+      "img": ""
+    },
+    {
+      "name": "GTX 1660",
+      "price": 200,
+      "memory": "6GB",
+      "clock": "1530MHz",
+      "img": ""
+    },
+    {
+      "name": "GTX 1660 Super",
+      "price": 220,
+      "memory": "6GB",
+      "clock": "1785MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 2060",
+      "price": 300,
+      "memory": "6GB",
+      "clock": "1365MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 3060",
+      "price": 350,
+      "memory": "12GB",
+      "clock": "1777MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 3050",
+      "price": 250,
+      "memory": "8GB",
+      "clock": "1552MHz",
+      "img": ""
+    },
+    {
+      "name": "RX 5600 XT",
+      "price": 280,
+      "memory": "6GB",
+      "clock": "1375MHz",
+      "img": ""
+    },
+    {
+      "name": "RX 5700 XT",
+      "price": 400,
+      "memory": "8GB",
+      "clock": "1605MHz",
+      "img": ""
+    },
+    {
+      "name": "GTX 1070",
+      "price": 250,
+      "memory": "8GB",
+      "clock": "1506MHz",
+      "img": ""
+    },
+    {
+      "name": "GTX 1080",
+      "price": 400,
+      "memory": "8GB",
+      "clock": "1607MHz",
+      "img": ""
+    },
+    {
+      "name": "GTX 1660 Ti",
+      "price": 280,
+      "memory": "6GB",
+      "clock": "1500MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 2060 Super",
+      "price": 350,
+      "memory": "8GB",
+      "clock": "1470MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 2070",
+      "price": 450,
+      "memory": "8GB",
+      "clock": "1410MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 3070",
+      "price": 600,
+      "memory": "8GB",
+      "clock": "1500MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 3080",
+      "price": 800,
+      "memory": "10GB",
+      "clock": "1440MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 3090",
+      "price": 1500,
+      "memory": "24GB",
+      "clock": "1395MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 4070 Ti",
+      "price": 900,
+      "memory": "12GB",
+      "clock": "1575MHz",
+      "img": ""
+    },
+    {
+      "name": "RTX 4090",
+      "price": 2000,
+      "memory": "24GB",
+      "clock": "1695MHz",
+      "img": ""
+    }
+  ],
+  "Motherboard": [
+    {
+      "name": "ASUS Prime B460",
+      "price": 100,
+      "socket": "LGA1200",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "ASUS Prime B660",
+      "price": 120,
+      "socket": "LGA1700",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "MSI B550 Tomahawk",
+      "price": 160,
+      "socket": "AM4",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "Gigabyte B450 Aorus",
+      "price": 90,
+      "socket": "AM4",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "Gigabyte B550M DS3H",
+      "price": 110,
+      "socket": "AM4",
+      "form": "mATX",
+      "img": ""
+    },
+    {
+      "name": "MSI B460M Pro",
+      "price": 95,
+      "socket": "LGA1200",
+      "form": "mATX",
+      "img": ""
+    },
+    {
+      "name": "ASRock B550 Phantom",
+      "price": 130,
+      "socket": "AM4",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "Gigabyte Z690 Aorus",
+      "price": 300,
+      "socket": "LGA1700",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "ASUS TUF B450-PLUS",
+      "price": 100,
+      "socket": "AM4",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "MSI Z490-A Pro",
+      "price": 180,
+      "socket": "LGA1200",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "ASUS ROG Strix B550-F",
+      "price": 200,
+      "socket": "AM4",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "Gigabyte B660 Gaming",
+      "price": 150,
+      "socket": "LGA1700",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "MSI B550M Bazooka",
+      "price": 120,
+      "socket": "AM4",
+      "form": "mATX",
+      "img": ""
+    },
+    {
+      "name": "ASRock B460 Steel Legend",
+      "price": 140,
+      "socket": "LGA1200",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "ASUS Prime Z590-P",
+      "price": 180,
+      "socket": "LGA1200",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "ASUS ROG Maximus Z690",
+      "price": 400,
+      "socket": "LGA1700",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "MSI MEG Z690 Unify",
+      "price": 500,
+      "socket": "LGA1700",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "Gigabyte Z690 Aorus Master",
+      "price": 600,
+      "socket": "LGA1700",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "ASUS ROG Crosshair VIII",
+      "price": 550,
+      "socket": "AM4",
+      "form": "ATX",
+      "img": ""
+    },
+    {
+      "name": "MSI MEG X570 Godlike",
+      "price": 700,
+      "socket": "AM4",
+      "form": "ATX",
+      "img": ""
+    }
+  ],
+  "RAM": [
+    {
+      "name": "Corsair Vengeance 8GB",
+      "price": 40,
+      "speed": "2666MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Corsair Vengeance 16GB",
+      "price": 70,
+      "speed": "3200MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "G.Skill Ripjaws 16GB",
+      "price": 65,
+      "speed": "3600MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Kingston HyperX 16GB",
+      "price": 68,
+      "speed": "3200MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Patriot Viper 16GB",
+      "price": 60,
+      "speed": "3000MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Crucial Ballistix 16GB",
+      "price": 72,
+      "speed": "3200MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Team T-Force 16GB",
+      "price": 64,
+      "speed": "3000MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Corsair Vengeance 32GB",
+      "price": 130,
+      "speed": "3200MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "G.Skill Trident Z 16GB",
+      "price": 75,
+      "speed": "3600MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Kingston Fury 16GB",
+      "price": 70,
+      "speed": "3200MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Patriot Viper 32GB",
+      "price": 120,
+      "speed": "3200MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Team Elite 16GB",
+      "price": 55,
+      "speed": "2666MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Crucial 8GB",
+      "price": 35,
+      "speed": "2666MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Corsair Dominator 16GB",
+      "price": 90,
+      "speed": "3600MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "G.Skill Ripjaws 32GB",
+      "price": 140,
+      "speed": "3200MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "G.Skill Trident Z Royal 32GB",
+      "price": 250,
+      "speed": "4000MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Corsair Dominator Platinum 32GB",
+      "price": 300,
+      "speed": "3600MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Kingston Fury Renegade 32GB",
+      "price": 270,
+      "speed": "3600MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "G.Skill Trident Z 64GB",
+      "price": 500,
+      "speed": "3600MHz",
+      "type": "DDR4",
+      "img": ""
+    },
+    {
+      "name": "Corsair Dominator Platinum RGB 64GB",
+      "price": 600,
+      "speed": "3600MHz",
+      "type": "DDR4",
+      "img": ""
+    }
+  ],
+  "Storage": [
+    {
+      "name": "WD Blue 500GB",
+      "price": 50,
+      "type": "HDD",
+      "read": "150MB/s",
+      "write": "140MB/s",
+      "img": ""
+    },
+    {
+      "name": "WD Blue 1TB",
+      "price": 50,
+      "type": "HDD",
+      "read": "150MB/s",
+      "write": "140MB/s",
+      "img": ""
+    },
+    {
+      "name": "Samsung 860 EVO 500GB",
+      "price": 60,
+      "type": "SSD SATA",
+      "read": "550MB/s",
+      "write": "520MB/s",
+      "img": ""
+    },
+    {
+      "name": "Crucial P2 500GB",
+      "price": 55,
+      "type": "SSD NVMe",
+      "read": "2400MB/s",
+      "write": "1800MB/s",
+      "img": ""
+    },
+    {
+      "name": "Crucial P5 1TB",
+      "price": 120,
+      "type": "SSD NVMe",
+      "read": "3400MB/s",
+      "write": "3000MB/s",
+      "img": ""
+    },
+    {
+      "name": "Samsung 970 EVO 500GB",
+      "price": 80,
+      "type": "SSD NVMe",
+      "read": "3500MB/s",
+      "write": "3000MB/s",
+      "img": ""
+    },
+    {
+      "name": "Kingston A2000 500GB",
+      "price": 50,
+      "type": "SSD NVMe",
+      "read": "2200MB/s",
+      "write": "2000MB/s",
+      "img": ""
+    },
+    {
+      "name": "WD SN550 1TB",
+      "price": 95,
+      "type": "SSD NVMe",
+      "read": "2400MB/s",
+      "write": "1950MB/s",
+      "img": ""
+    },
+    {
+      "name": "Crucial BX500 500GB",
+      "price": 45,
+      "type": "SSD SATA",
+      "read": "540MB/s",
+      "write": "500MB/s",
+      "img": ""
+    },
+    {
+      "name": "Samsung 870 EVO 1TB",
+      "price": 90,
+      "type": "SSD SATA",
+      "read": "560MB/s",
+      "write": "530MB/s",
+      "img": ""
+    },
+    {
+      "name": "Seagate Barracuda 1TB",
+      "price": 45,
+      "type": "HDD",
+      "read": "150MB/s",
+      "write": "140MB/s",
+      "img": ""
+    },
+    {
+      "name": "WD Black SN750 500GB",
+      "price": 80,
+      "type": "SSD NVMe",
+      "read": "3470MB/s",
+      "write": "3000MB/s",
+      "img": ""
+    },
+    {
+      "name": "Crucial P1 1TB",
+      "price": 85,
+      "type": "SSD NVMe",
+      "read": "2000MB/s",
+      "write": "1700MB/s",
+      "img": ""
+    },
+    {
+      "name": "Samsung 980 1TB",
+      "price": 120,
+      "type": "SSD NVMe",
+      "read": "3500MB/s",
+      "write": "3000MB/s",
+      "img": ""
+    },
+    {
+      "name": "WD Blue SN570 1TB",
+      "price": 90,
+      "type": "SSD NVMe",
+      "read": "3500MB/s",
+      "write": "3000MB/s",
+      "img": ""
+    },
+    {
+      "name": "Samsung 980 Pro 1TB",
+      "price": 180,
+      "type": "SSD NVMe",
+      "read": "7000MB/s",
+      "write": "5000MB/s",
+      "img": ""
+    },
+    {
+      "name": "WD Black SN850X 1TB",
+      "price": 200,
+      "type": "SSD NVMe",
+      "read": "7300MB/s",
+      "write": "6000MB/s",
+      "img": ""
+    },
+    {
+      "name": "Seagate FireCuda 530 2TB",
+      "price": 450,
+      "type": "SSD NVMe",
+      "read": "7300MB/s",
+      "write": "6900MB/s",
+      "img": ""
+    },
+    {
+      "name": "Samsung 990 Pro 2TB",
+      "price": 500,
+      "type": "SSD NVMe",
+      "read": "7400MB/s",
+      "write": "6900MB/s",
+      "img": ""
+    },
+    {
+      "name": "Kingston KC3000 2TB",
+      "price": 480,
+      "type": "SSD NVMe",
+      "read": "7000MB/s",
+      "write": "6000MB/s",
+      "img": ""
+    }
+  ],
+  "PSU": [
+    {
+      "name": "Corsair 450W",
+      "price": 50,
+      "watt": "450W",
+      "rating": "80+ Bronze",
+      "img": ""
+    },
+    {
+      "name": "Corsair 550W",
+      "price": 60,
+      "watt": "550W",
+      "rating": "80+ Bronze",
+      "img": ""
+    },
+    {
+      "name": "EVGA 550W",
+      "price": 55,
+      "watt": "550W",
+      "rating": "80+ Bronze",
+      "img": ""
+    },
+    {
+      "name": "EVGA 650W",
+      "price": 80,
+      "watt": "650W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "Seasonic 550W",
+      "price": 70,
+      "watt": "550W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "Seasonic 650W",
+      "price": 90,
+      "watt": "650W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "Cooler Master 550W",
+      "price": 60,
+      "watt": "550W",
+      "rating": "80+ Bronze",
+      "img": ""
+    },
+    {
+      "name": "Corsair RM650",
+      "price": 100,
+      "watt": "650W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "EVGA 700W",
+      "price": 110,
+      "watt": "700W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "Seasonic 750W",
+      "price": 120,
+      "watt": "750W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "Corsair TX650",
+      "price": 90,
+      "watt": "650W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "Cooler Master 650W",
+      "price": 85,
+      "watt": "650W",
+      "rating": "80+ Bronze",
+      "img": ""
+    },
+    {
+      "name": "Thermaltake 650W",
+      "price": 75,
+      "watt": "650W",
+      "rating": "80+ Bronze",
+      "img": ""
+    },
+    {
+      "name": "Be Quiet 600W",
+      "price": 95,
+      "watt": "600W",
+      "rating": "80+ Gold",
+      "img": ""
+    },
+    {
+      "name": "Corsair CX750",
+      "price": 110,
+      "watt": "750W",
+      "rating": "80+ Bronze",
+      "img": ""
+    },
+    {
+      "name": "Corsair HX850",
+      "price": 180,
+      "watt": "850W",
+      "rating": "80+ Platinum",
+      "img": ""
+    },
+    {
+      "name": "Seasonic PRIME 850W",
+      "price": 200,
+      "watt": "850W",
+      "rating": "80+ Platinum",
+      "img": ""
+    },
+    {
+      "name": "EVGA Supernova 850W",
+      "price": 160,
+      "watt": "850W",
+      "rating": "80+ Platinum",
+      "img": ""
+    },
+    {
+      "name": "Be Quiet Dark Power Pro 850W",
+      "price": 220,
+      "watt": "850W",
+      "rating": "80+ Platinum",
+      "img": ""
+    },
+    {
+      "name": "Corsair AX1000",
+      "price": 350,
+      "watt": "1000W",
+      "rating": "80+ Platinum",
+      "img": ""
+    }
+  ],
+  "Case": [
+    {
+      "name": "Cooler Master Q300L",
+      "price": 50,
+      "img": ""
+    },
+    {
+      "name": "NZXT H510",
+      "price": 70,
+      "img": ""
+    },
+    {
+      "name": "Corsair 200R",
+      "price": 60,
+      "img": ""
+    },
+    {
+      "name": "Thermaltake V200",
+      "price": 55,
+      "img": ""
+    },
+    {
+      "name": "Fractal Design Focus G",
+      "price": 65,
+      "img": ""
+    },
+    {
+      "name": "Phanteks P400A",
+      "price": 75,
+      "img": ""
+    },
+    {
+      "name": "Cooler Master MasterBox MB320L",
+      "price": 60,
+      "img": ""
+    },
+    {
+      "name": "Corsair 275R",
+      "price": 80,
+      "img": ""
+    },
+    {
+      "name": "NZXT H510i",
+      "price": 100,
+      "img": ""
+    },
+    {
+      "name": "Thermaltake Versa H18",
+      "price": 50,
+      "img": ""
+    },
+    {
+      "name": "Fractal Design Meshify C Mini",
+      "price": 85,
+      "img": ""
+    },
+    {
+      "name": "Phanteks Eclipse P360A",
+      "price": 90,
+      "img": ""
+    },
+    {
+      "name": "Cooler Master MasterBox NR400",
+      "price": 75,
+      "img": ""
+    },
+    {
+      "name": "Corsair 4000D",
+      "price": 90,
+      "img": ""
+    },
+    {
+      "name": "NZXT H210",
+      "price": 95,
+      "img": ""
+    },
+    {
+      "name": "Lian Li PC-O11 Dynamic",
+      "price": 150,
+      "img": ""
+    },
+    {
+      "name": "Corsair Obsidian 500D",
+      "price": 180,
+      "img": ""
+    },
+    {
+      "name": "Fractal Design Define 7",
+      "price": 200,
+      "img": ""
+    },
+    {
+      "name": "NZXT H710i",
+      "price": 190,
+      "img": ""
+    },
+    {
+      "name": "Phanteks Evolv X",
+      "price": 220,
+      "img": ""
+    }
+  ],
+  "Cooler": [
+    {
+      "name": "Cooler Master Hyper 212",
+      "price": 35,
+      "type": "Air",
+      "rpm": "2000",
+      "img": ""
+    },
+    {
+      "name": "be quiet! Pure Rock 2",
+      "price": 40,
+      "type": "Air",
+      "rpm": "1800",
+      "img": ""
+    },
+    {
+      "name": "Deepcool Gammaxx 400",
+      "price": 30,
+      "type": "Air",
+      "rpm": "1800",
+      "img": ""
+    },
+    {
+      "name": "Noctua NH-U12S",
+      "price": 60,
+      "type": "Air",
+      "rpm": "1500",
+      "img": ""
+    },
+    {
+      "name": "Arctic Freezer 34 eSports",
+      "price": 45,
+      "type": "Air",
+      "rpm": "2000",
+      "img": ""
+    },
+    {
+      "name": "Cooler Master Hyper 212 Black",
+      "price": 40,
+      "type": "Air",
+      "rpm": "2000",
+      "img": ""
+    },
+    {
+      "name": "Deepcool Assassin III",
+      "price": 55,
+      "type": "Air",
+      "rpm": "1800",
+      "img": ""
+    },
+    {
+      "name": "Cryorig H7",
+      "price": 50,
+      "type": "Air",
+      "rpm": "1800",
+      "img": ""
+    },
+    {
+      "name": "Thermaltake UX200",
+      "price": 35,
+      "type": "Air",
+      "rpm": "2000",
+      "img": ""
+    },
+    {
+      "name": "Scythe Mugen 5 Rev.B",
+      "price": 55,
+      "type": "Air",
+      "rpm": "1500",
+      "img": ""
+    },
+    {
+      "name": "Noctua NH-U14S",
+      "price": 70,
+      "type": "Air",
+      "rpm": "1500",
+      "img": ""
+    },
+    {
+      "name": "Cooler Master Hyper H412R",
+      "price": 45,
+      "type": "Air",
+      "rpm": "2000",
+      "img": ""
+    },
+    {
+      "name": "Arctic Freezer 7 X",
+      "price": 30,
+      "type": "Air",
+      "rpm": "2000",
+      "img": ""
+    },
+    {
+      "name": "be quiet! Shadow Rock 3",
+      "price": 55,
+      "type": "Air",
+      "rpm": "1800",
+      "img": ""
+    },
+    {
+      "name": "Deepcool Gammaxx 400 EX",
+      "price": 40,
+      "type": "Air",
+      "rpm": "1800",
+      "img": ""
+    },
+    {
+      "name": "Noctua NH-D15",
+      "price": 90,
+      "type": "Air",
+      "rpm": "1500",
+      "img": ""
+    },
+    {
+      "name": "be quiet! Dark Rock Pro 4",
+      "price": 85,
+      "type": "Air",
+      "rpm": "1500",
+      "img": ""
+    },
+    {
+      "name": "Corsair H100i RGB Platinum",
+      "price": 120,
+      "type": "Liquid",
+      "rpm": "2400",
+      "img": ""
+    },
+    {
+      "name": "NZXT Kraken X63",
+      "price": 140,
+      "type": "Liquid",
+      "rpm": "2000",
+      "img": ""
+    },
+    {
+      "name": "Corsair iCUE H150i Elite Capellix",
+      "price": 180,
+      "type": "Liquid",
+      "rpm": "2400",
+      "img": ""
+    }
+  ]
+}
