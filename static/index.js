@@ -293,14 +293,5 @@ checkModal.addEventListener('click', (e) => {
 })
 
 
-// TODO: sort button toggles #sortMenu open/closed; sortAsc/sortDesc re-sort
-// the currently active category's parts and re-render.
-
-// TODO: "check build" -> validate configuration against the budget and
-// missing categories, same idea as the old checkConfiguration().
-
-// TODO: reset / skip level -> same idea as the old game, adapted to whatever
-// you decide levels look like here (still hardcoded client-side for now,
-// GET /api/levels doesn't exist until phase 5).
 loadLevels()
 loadParts();
