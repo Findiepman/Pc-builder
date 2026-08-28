@@ -1,0 +1,104 @@
+{
+    "levels": [
+        {
+            "Level": "1",
+            "Budget": "$500",
+            "Goal": "Build a low-end computer for an office employee"
+        },
+        {
+            "Level": "2",
+            "Budget": "$750",
+            "Goal": "Build a low end gaming computer"
+        },
+        {
+            "Level": "3",
+            "Budget": "$900",
+            "Goal": "Build a budget streaming/office hybrid PC"
+        },
+        {
+            "Level": "4",
+            "Budget": "$1100",
+            "Goal": "Build a 1080p esports PC for competitive shooters"
+        },
+        {
+            "Level": "5",
+            "Budget": "$1300",
+            "Goal": "Build a 1080p high-refresh gaming PC"
+        },
+        {
+            "Level": "6",
+            "Budget": "$1500",
+            "Goal": "Build a solid 1440p gaming PC"
+        },
+        {
+            "Level": "7",
+            "Budget": "$1800",
+            "Goal": "Build a 1440p gaming PC that can also stream"
+        },
+        {
+            "Level": "8",
+            "Budget": "$2000",
+            "Goal": "Build a budget video editing workstation"
+        },
+        {
+            "Level": "9",
+            "Budget": "$2200",
+            "Goal": "Build an entry-level 4K gaming PC"
+        },
+        {
+            "Level": "10",
+            "Budget": "$2500",
+            "Goal": "Build a high-end 1440p gaming PC"
+        },
+        {
+            "Level": "11",
+            "Budget": "$2800",
+            "Goal": "Build a CAD and 3D modeling workstation"
+        },
+        {
+            "Level": "12",
+            "Budget": "$3200",
+            "Goal": "Build an enthusiast 4K gaming PC"
+        },
+        {
+            "Level": "13",
+            "Budget": "$3500",
+            "Goal": "Build a dual-purpose content creation and gaming rig"
+        },
+        {
+            "Level": "14",
+            "Budget": "$4000",
+            "Goal": "Build a high-end 4K gaming PC that can also stream"
+        },
+        {
+            "Level": "15",
+            "Budget": "$4500",
+            "Goal": "Build an AI/ML development workstation"
+        },
+        {
+            "Level": "16",
+            "Budget": "$5000",
+            "Goal": "Build an extreme no-compromise gaming rig"
+        },
+        {
+            "Level": "17",
+            "Budget": "$6000",
+            "Goal": "Build a professional 3D rendering workstation"
+        },
+        {
+            "Level": "18",
+            "Budget": "$7000",
+            "Goal": "Build a halo-tier gaming and streaming rig"
+        },
+        {
+            "Level": "19",
+            "Budget": "$8500",
+            "Goal": "Build an extreme overkill workstation"
+        },
+        {
+            "Level": "20",
+            "Budget": "$10000",
+            "Goal": "Build a money-no-object dream PC"
+        }
+    ]
+}
