@@ -24,6 +24,9 @@ let parts = null;
 let activeCategory = null;
 let selectedPart = null;
 let configuration = {}; 
+let levels = null;
+let usedLevels = []
+let currentBudget = null;
 
 async function loadParts() {
     const response = await fetch('/api/parts') 
@@ -38,6 +41,37 @@ async function loadParts() {
     console.log(data)
 }
 
+async function loadLevels() {
+    const reponse = await fetch('/api/levels')
+    if (!reponse.ok) {
+        console.error("Levels request failed", reponse.status)
+        return;
+
+    }
+    const data = await reponse.json()
+    levels = data.levels
+
+
+
+    const index = pickLevel()
+    const index1 = levels[index]
+    currentBudget = Number(index1.Budget.replace('$', ''))
+    goalText.textContent = index1.Goal
+    budgetValue.textContent = index1.Budget
+    levelValue.textContent = index1.Level
+
+}
+
+function pickLevel() {
+
+    let chosenLevel = Math.floor(Math.random() * levels.length)
+    while (usedLevels.includes(chosenLevel)) {
+        chosenLevel = Math.floor(Math.random() * levels.length)
+    }
+    usedLevels.push(chosenLevel)
+    return chosenLevel
+}
+
 function renderParts(category) {
     partsList.innerHTML = "";
     const displayList = parts[category]
@@ -47,7 +81,7 @@ function renderParts(category) {
         card.className = "part-card"
         card.innerHTML = `
             <div class="name">${part.name}</div>
-            <div class="price">€${part.price}</div>
+            <div class="price">$${part.price}</div>
         `;
         card.addEventListener("click", () => {
             selectedPart = { category: category, part: part }
@@ -115,6 +149,7 @@ function addToBuild() {
         buildSlots.classList.add('filled')
         caseTag.textContent = selectedPart.part.name
     }
+    updateTotal()
 }
 buildSlots.addEventListener("click", (event) => {
     const button = event.target.closest(".remove")
@@ -139,11 +174,21 @@ function removeFromBuild(category) {
         caseTag.textContent = "Case"
         delete configuration[category]
     }
+    updateTotal()
 }
 
 // TODO: recalculate the total from `configuration`, update #totalValue,
 // and toggle a class on #totalStat (e.g. "over" / "close") based on budget.
-function updateTotal() {}
+function updateTotal() {
+    let price = 0
+    Object.values(configuration).forEach(part => {
+        price += part.price 
+    })
+    totalStat.classList.toggle('over', price > currentBudget)
+    totalStat.classList.toggle('close', price >= currentBudget * 0.9 && price <= currentBudget)
+    totalValue.textContent = `$${price}`
+
+}
 
 // TODO: sort button toggles #sortMenu open/closed; sortAsc/sortDesc re-sort
 // the currently active category's parts and re-render.
@@ -154,5 +199,5 @@ function updateTotal() {}
 // TODO: reset / skip level -> same idea as the old game, adapted to whatever
 // you decide levels look like here (still hardcoded client-side for now,
 // GET /api/levels doesn't exist until phase 5).
-
+loadLevels()
 loadParts();
