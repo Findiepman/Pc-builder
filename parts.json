@@ -74,7 +74,7 @@
     },
     {
       "name": "Intel i7-10700",
-      "price": 330,
+      "price": 190,
       "clock": "2.9GHz",
       "cores": 8,
       "threads": 16,
@@ -90,7 +90,7 @@
     },
     {
       "name": "Intel i5-10600K",
-      "price": 220,
+      "price": 150,
       "clock": "4.1GHz",
       "cores": 6,
       "threads": 12,
@@ -122,7 +122,7 @@
     },
     {
       "name": "Intel i7-12700K",
-      "price": 440,
+      "price": 340,
       "clock": "3.6GHz",
       "cores": 12,
       "threads": 20,
@@ -130,7 +130,7 @@
     },
     {
       "name": "Intel i9-12900K",
-      "price": 660,
+      "price": 530,
       "clock": "3.2GHz",
       "cores": 16,
       "threads": 24,
@@ -138,7 +138,7 @@
     },
     {
       "name": "AMD Ryzen 9 5900X",
-      "price": 605,
+      "price": 260,
       "clock": "3.7GHz",
       "cores": 12,
       "threads": 24,
@@ -146,7 +146,7 @@
     },
     {
       "name": "AMD Ryzen 9 5950X",
-      "price": 770,
+      "price": 420,
       "clock": "3.4GHz",
       "cores": 16,
       "threads": 32,
@@ -154,7 +154,7 @@
     },
     {
       "name": "Intel i9-13900K",
-      "price": 825,
+      "price": 480,
       "clock": "3.0GHz",
       "cores": 24,
       "threads": 32,
@@ -194,7 +194,7 @@
     },
     {
       "name": "AMD Ryzen 5 9600X",
-      "price": 310,
+      "price": 190,
       "clock": "3.9GHz",
       "cores": 6,
       "threads": 12,
@@ -202,7 +202,7 @@
     },
     {
       "name": "AMD Ryzen 7 9700X",
-      "price": 395,
+      "price": 290,
       "clock": "3.8GHz",
       "cores": 8,
       "threads": 16,
@@ -210,7 +210,7 @@
     },
     {
       "name": "AMD Ryzen 7 9800X3D",
-      "price": 530,
+      "price": 420,
       "clock": "4.7GHz",
       "cores": 8,
       "threads": 16,
@@ -218,7 +218,7 @@
     },
     {
       "name": "AMD Ryzen 9 9900X",
-      "price": 515,
+      "price": 350,
       "clock": "4.4GHz",
       "cores": 12,
       "threads": 24,
@@ -226,7 +226,7 @@
     },
     {
       "name": "AMD Ryzen 9 9950X",
-      "price": 715,
+      "price": 520,
       "clock": "4.3GHz",
       "cores": 16,
       "threads": 32,
@@ -234,7 +234,7 @@
     },
     {
       "name": "AMD Ryzen 9 9950X3D",
-      "price": 790,
+      "price": 600,
       "clock": "4.3GHz",
       "cores": 16,
       "threads": 32,
@@ -242,7 +242,7 @@
     },
     {
       "name": "Intel Core Ultra 5 245K",
-      "price": 260,
+      "price": 185,
       "clock": "4.2GHz",
       "cores": 14,
       "threads": 14,
@@ -250,7 +250,7 @@
     },
     {
       "name": "Intel Core Ultra 7 265K",
-      "price": 340,
+      "price": 280,
       "clock": "3.9GHz",
       "cores": 20,
       "threads": 20,
@@ -263,6 +263,30 @@
       "cores": 24,
       "threads": 24,
       "img": "https://c1.neweggimages.com/ProductImage/19-118-505-08.jpg"
+    },
+    {
+      "name": "Intel Celeron G6900",
+      "price": 75,
+      "clock": "3.4GHz",
+      "cores": 2,
+      "threads": 2,
+      "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/69eb80fb-cc8e-405c-b47a-696277bfdd7d.jpg;maxHeight=1920;maxWidth=900?format=webp"
+    },
+    {
+      "name": "Intel Pentium Gold G7400",
+      "price": 85,
+      "clock": "3.7GHz",
+      "cores": 2,
+      "threads": 4,
+      "img": "https://c1.neweggimages.com/ProductImage/B68ES250826182H3005.jpg"
+    },
+    {
+      "name": "AMD Athlon 3000G",
+      "price": 50,
+      "clock": "3.5GHz",
+      "cores": 2,
+      "threads": 4,
+      "img": "https://c1.neweggimages.com/ProductImage/AN0MS200611PyH1c.jpg"
     }
   ],
   "GPU": [
@@ -272,133 +296,133 @@
     },
     {
       "name": "GTX 1050",
-      "price": 140,
+      "price": 55,
       "memory": "2GB",
       "clock": "1354MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-125-917-03.jpg"
     },
     {
       "name": "GTX 1650",
-      "price": 180,
+      "price": 80,
       "memory": "4GB",
       "clock": "1485MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-932-314-S03.jpg"
     },
     {
       "name": "GTX 1650 Super",
-      "price": 220,
+      "price": 90,
       "memory": "4GB",
       "clock": "1530MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-487-482-V06.jpg"
     },
     {
       "name": "GTX 1660",
-      "price": 240,
+      "price": 100,
       "memory": "6GB",
       "clock": "1530MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-932-138-04.jpg"
     },
     {
       "name": "GTX 1660 Super",
-      "price": 260,
+      "price": 110,
       "memory": "6GB",
       "clock": "1785MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-932-223-V04.jpg"
     },
     {
       "name": "RTX 2060",
-      "price": 360,
+      "price": 140,
       "memory": "6GB",
       "clock": "1365MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-425-V08.jpg"
     },
     {
       "name": "RTX 3060",
-      "price": 420,
+      "price": 330,
       "memory": "12GB",
       "clock": "1777MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-496-V01.jpg"
     },
     {
       "name": "RTX 3050",
-      "price": 300,
+      "price": 240,
       "memory": "8GB",
       "clock": "1552MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-708-06.png"
     },
     {
       "name": "RX 5600 XT",
-      "price": 340,
+      "price": 120,
       "memory": "6GB",
       "clock": "1375MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-932-307-S01.jpg"
     },
     {
       "name": "RX 5700 XT",
-      "price": 480,
+      "price": 180,
       "memory": "8GB",
       "clock": "1605MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-932-299-S01.jpg"
     },
     {
       "name": "GTX 1070",
-      "price": 300,
+      "price": 85,
       "memory": "8GB",
       "clock": "1506MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-125-871-S99.jpg"
     },
     {
       "name": "GTX 1080",
-      "price": 480,
+      "price": 120,
       "memory": "8GB",
       "clock": "1607MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-103-28.jpg"
     },
     {
       "name": "GTX 1660 Ti",
-      "price": 340,
+      "price": 100,
       "memory": "6GB",
       "clock": "1500MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-137-391-01.jpg"
     },
     {
       "name": "RTX 2060 Super",
-      "price": 420,
+      "price": 170,
       "memory": "8GB",
       "clock": "1470MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-331-V02.jpg"
     },
     {
       "name": "RTX 2070",
-      "price": 540,
+      "price": 190,
       "memory": "8GB",
       "clock": "1410MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-137-377-V06.jpg"
     },
     {
       "name": "RTX 3070",
-      "price": 720,
+      "price": 260,
       "memory": "8GB",
       "clock": "1500MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-461-01.jpg"
     },
     {
       "name": "RTX 3080",
-      "price": 960,
+      "price": 420,
       "memory": "10GB",
       "clock": "1440MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-457-V01.jpg"
     },
     {
       "name": "RTX 3090",
-      "price": 1800,
+      "price": 1500,
       "memory": "24GB",
       "clock": "1395MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-137-645-V01.jpg"
     },
     {
       "name": "RTX 4070 Ti",
-      "price": 1080,
+      "price": 690,
       "memory": "12GB",
       "clock": "1575MHz",
       "img": "https://c1.neweggimages.com/productimage/nb640/14-126-606-20.jpg"
@@ -419,14 +443,14 @@
     },
     {
       "name": "Intel Arc B580",
-      "price": 260,
+      "price": 300,
       "memory": "12GB",
       "clock": "2670MHz",
       "img": "https://c1.neweggimages.com/ProductImage/14-883-006-16.png"
     },
     {
       "name": "Intel Arc A770",
-      "price": 300,
+      "price": 230,
       "memory": "16GB",
       "clock": "2100MHz",
       "img": "https://c1.neweggimages.com/ProductImage/BM9SS24110707UD0450.jpg"
@@ -461,7 +485,7 @@
     },
     {
       "name": "RTX 5060 Ti",
-      "price": 480,
+      "price": 600,
       "memory": "16GB",
       "clock": "2572MHz",
       "img": "https://c1.neweggimages.com/ProductImage/14-126-791-01.png"
@@ -475,7 +499,7 @@
     },
     {
       "name": "RTX 5070 Ti",
-      "price": 950,
+      "price": 1100,
       "memory": "16GB",
       "clock": "2452MHz",
       "img": "https://c1.neweggimages.com/ProductImage/14-126-756-12.png"
@@ -489,7 +513,7 @@
     },
     {
       "name": "RTX 5090",
-      "price": 2600,
+      "price": 4500,
       "memory": "32GB",
       "clock": "2410MHz",
       "img": "https://c1.neweggimages.com/ProductImage/B9ZZS250616104P0YAB.jpg"
@@ -505,21 +529,21 @@
     },
     {
       "name": "ASUS Prime B660",
-      "price": 130,
+      "price": 158,
       "socket": "LGA1700",
       "form": "ATX",
       "img": "https://dlcdnwebimgs.asus.com/gain/fb95a37b-ee86-42f5-9615-cf9103c5fa0a/w692"
     },
     {
       "name": "MSI B550 Tomahawk",
-      "price": 175,
+      "price": 205,
       "socket": "AM4",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-144-326-V01.jpg"
     },
     {
       "name": "Gigabyte B450 Aorus",
-      "price": 100,
+      "price": 125,
       "socket": "AM4",
       "form": "ATX",
       "img": "https://static.gigabyte.com/StaticFile/Image/Global/2710c8e6d8b7f0c7d6ccdb9a688685ff/ProductRemoveBg/21214"
@@ -561,7 +585,7 @@
     },
     {
       "name": "MSI Z490-A Pro",
-      "price": 200,
+      "price": 127,
       "socket": "LGA1200",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-144-306-V01.jpg"
@@ -589,28 +613,28 @@
     },
     {
       "name": "ASRock B460 Steel Legend",
-      "price": 155,
+      "price": 125,
       "socket": "LGA1200",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-157-944-01.jpg"
     },
     {
       "name": "ASUS Prime Z590-P",
-      "price": 200,
+      "price": 140,
       "socket": "LGA1200",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-119-372-01.jpg"
     },
     {
       "name": "ASUS ROG Maximus Z690",
-      "price": 440,
+      "price": 370,
       "socket": "LGA1700",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/ProductImage/nb640/13-119-504-V07.jpg"
     },
     {
       "name": "MSI MEG Z690 Unify",
-      "price": 550,
+      "price": 460,
       "socket": "LGA1700",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/ProductImage/13-144-502-V01.jpg"
@@ -645,14 +669,14 @@
     },
     {
       "name": "ASUS Prime B650-Plus",
-      "price": 165,
+      "price": 220,
       "socket": "AM5",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-119-607-16.png"
     },
     {
       "name": "Gigabyte B850 Gaming X",
-      "price": 210,
+      "price": 160,
       "socket": "AM5",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-145-546-01.jpg"
@@ -666,221 +690,263 @@
     },
     {
       "name": "ASUS ROG Strix X870-E Gaming",
-      "price": 530,
+      "price": 400,
       "socket": "AM5",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-119-682-16.jpg"
     },
     {
       "name": "MSI MEG X870E Godlike",
-      "price": 825,
+      "price": 1000,
       "socket": "AM5",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/ProductImage/13-144-678-01.jpg"
     },
     {
       "name": "ASUS Prime B860-Plus",
-      "price": 190,
+      "price": 270,
       "socket": "LGA1851",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-119-713-02.png"
     },
     {
       "name": "MSI MAG Z890 Tomahawk",
-      "price": 300,
+      "price": 260,
       "socket": "LGA1851",
       "form": "ATX",
       "img": "https://c1.neweggimages.com/productimage/nb640/13-144-669-06.png"
+    },
+    {
+      "name": "ASRock A320M-HDV",
+      "price": 79,
+      "socket": "AM4",
+      "form": "mATX",
+      "img": "https://c1.neweggimages.com/productimage/nb640/13-157-872-V80.jpg"
+    },
+    {
+      "name": "ASRock A520M-HDV",
+      "price": 77,
+      "socket": "AM4",
+      "form": "mATX",
+      "img": "https://c1.neweggimages.com/productimage/nb640/13-157-958-01.jpg"
+    },
+    {
+      "name": "MSI PRO H610M-G DDR4",
+      "price": 90,
+      "socket": "LGA1700",
+      "form": "mATX",
+      "img": "https://c1.neweggimages.com/ProductImageCompressAll60/13-144-525-08.jpg"
     }
   ],
   "RAM": [
     {
       "name": "Corsair Vengeance 8GB",
-      "price": 50,
+      "price": 65,
       "speed": "2666MHz",
       "type": "DDR4",
       "img": "https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_600/products/Memory/CMK8GX4M1A2666C16/Gallery/VENG_LPX_BLK_01.png"
     },
     {
       "name": "Corsair Vengeance 16GB",
-      "price": 90,
+      "price": 145,
       "speed": "3200MHz",
       "type": "DDR4",
       "img": "https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_600/products/Memory/CMW16GX4M2C3200C16/Gallery/Vengeance_RGB_Pro_01.png"
     },
     {
       "name": "G.Skill Ripjaws 16GB",
-      "price": 80,
+      "price": 120,
       "speed": "3600MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/productimage/nb640/20-231-977-01.jpg"
     },
     {
       "name": "Kingston HyperX 16GB",
-      "price": 85,
+      "price": 140,
       "speed": "3200MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/A25V_1_201904151345554942.jpg"
     },
     {
       "name": "Patriot Viper 16GB",
-      "price": 75,
+      "price": 105,
       "speed": "3000MHz",
       "type": "DDR4",
       "img": "https://patriot-cms-media.sgp1.cdn.digitaloceanspaces.com/legacy_viper_viper_4_ddr4_en_gallery_1_4d25294d03.jpg"
     },
     {
       "name": "Crucial Ballistix 16GB",
-      "price": 90,
+      "price": 170,
       "speed": "3200MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-164-208-01.jpg"
     },
     {
       "name": "Team T-Force 16GB",
-      "price": 80,
+      "price": 108,
       "speed": "3000MHz",
       "type": "DDR4",
       "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/a167b6a0-8962-45cd-bfb8-05dd4831dbda.jpg;maxHeight=1920;maxWidth=900?format=webp"
     },
     {
       "name": "Corsair Vengeance 32GB",
-      "price": 160,
+      "price": 225,
       "speed": "3200MHz",
       "type": "DDR4",
       "img": "https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_600/products/Memory/CMK32GX4M2E3200C16/Gallery/VENG_LPX_BLK_01.png"
     },
     {
       "name": "G.Skill Trident Z 16GB",
-      "price": 95,
+      "price": 135,
       "speed": "3600MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-231-912-01.jpg"
     },
     {
       "name": "Kingston Fury 16GB",
-      "price": 90,
+      "price": 140,
       "speed": "3200MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-242-794-01.jpg"
     },
     {
       "name": "Patriot Viper 32GB",
-      "price": 150,
+      "price": 205,
       "speed": "3200MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/A4M5_1_2017010420883078.jpg"
     },
     {
       "name": "Team Elite 16GB",
-      "price": 70,
+      "price": 95,
       "speed": "2666MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-331-526-V04.jpg"
     },
     {
       "name": "Crucial 8GB",
-      "price": 45,
+      "price": 58,
       "speed": "2666MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-156-264-V01.jpg"
     },
     {
       "name": "Corsair Dominator 16GB",
-      "price": 110,
+      "price": 155,
       "speed": "3600MHz",
       "type": "DDR4",
       "img": "https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_600/products/Memory/CMD16GX4M2B3200C16/Gallery/DOM_DDR4_PLAT_001.png"
     },
     {
       "name": "G.Skill Ripjaws 32GB",
-      "price": 175,
+      "price": 210,
       "speed": "3200MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-232-907-02.jpg"
     },
     {
       "name": "G.Skill Trident Z Royal 32GB",
-      "price": 310,
+      "price": 495,
       "speed": "4000MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-232-795-V10.jpg"
     },
     {
       "name": "Corsair Dominator Platinum 32GB",
-      "price": 375,
+      "price": 525,
       "speed": "3600MHz",
       "type": "DDR4",
       "img": "https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_600/products/Memory/CMT32GX4M2C3200C16/Gallery/DOMINATOR_PLAT_RGB_01.png"
     },
     {
       "name": "Kingston Fury Renegade 32GB",
-      "price": 340,
+      "price": 445,
       "speed": "3600MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-242-621-V02.jpg"
     },
     {
       "name": "G.Skill Trident Z 64GB",
-      "price": 625,
+      "price": 875,
       "speed": "3600MHz",
       "type": "DDR4",
       "img": "https://c1.neweggimages.com/ProductImage/20-374-063-V01.jpg"
     },
     {
       "name": "Corsair Dominator Platinum RGB 64GB",
-      "price": 750,
+      "price": 1050,
       "speed": "3600MHz",
       "type": "DDR4",
       "img": "https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_600/products/Memory/CMT64GX4M2E3200C16/Gallery/DOMINATOR_PLAT_RGB_01.png"
     },
     {
       "name": "Kingston Fury Beast 16GB",
-      "price": 90,
+      "price": 300,
       "speed": "5600MHz",
       "type": "DDR5",
       "img": "https://c1.neweggimages.com/ProductImage/A6ZPD21072914SD4O.jpg"
     },
     {
       "name": "Corsair Vengeance 32GB DDR5",
-      "price": 175,
+      "price": 480,
       "speed": "6000MHz",
       "type": "DDR5",
       "img": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-ddr5-blk-config/Gallery/VENGEANCE_DDR5_BLK_01_2up.webp"
     },
     {
       "name": "G.Skill Flare X5 32GB",
-      "price": 190,
+      "price": 596,
       "speed": "6000MHz",
       "type": "DDR5",
       "img": "https://c1.neweggimages.com/ProductImage/20-374-419-08.png"
     },
     {
       "name": "Corsair Dominator Titanium 32GB",
-      "price": 240,
+      "price": 670,
       "speed": "6000MHz",
       "type": "DDR5",
       "img": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/Dominator%20Titanium/enhanced%20images/white/2UP/DOMINATOR_TITANIUM_RGB_DDR5_WHITE_2UP_Artboard01_AA.webp"
     },
     {
       "name": "G.Skill Trident Z5 RGB 32GB",
-      "price": 270,
+      "price": 620,
       "speed": "6400MHz",
       "type": "DDR5",
       "img": "https://c1.neweggimages.com/ProductImage/20-374-358-10.png"
     },
     {
       "name": "Corsair Vengeance 64GB DDR5",
-      "price": 430,
+      "price": 1200,
       "speed": "6000MHz",
       "type": "DDR5",
       "img": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-ddr5-blk-config/Gallery/VENGEANCE_DDR5_BLK_01_2up.webp"
+    },
+    {
+      "name": "Kingston ValueRAM 4GB",
+      "price": 40,
+      "speed": "2666MHz",
+      "type": "DDR4",
+      "img": "https://media.memoryexpress.com/Images/Products/MX77951/0?Size=Large"
+    },
+    {
+      "name": "PNY 8GB Performance DDR4",
+      "price": 29,
+      "speed": "2666MHz",
+      "type": "DDR4",
+      "img": "https://i5.walmartimages.com/seo/PNY-DDR4-module-8-GB-DIMM-288-pin-2666-MHz-PC4-21300-CL19-1-2-V-unbuffered-non-ECC_3d120a28-832f-42f8-9bd5-b2f61f58f5f9.c4ef5eea553bc33ae2e1dff9671764d2.jpeg"
+    },
+    {
+      "name": "PNY 8GB DDR4 (Black)",
+      "price": 20,
+      "speed": "2666MHz",
+      "type": "DDR4",
+      "img": "https://i5.walmartimages.com/seo/PNY-DDR4-module-8-GB-DIMM-288-pin-2666-MHz-PC4-21300-CL19-1-2-V-unbuffered-non-ECC_3d120a28-832f-42f8-9bd5-b2f61f58f5f9.c4ef5eea553bc33ae2e1dff9671764d2.jpeg"
     }
   ],
   "Storage": [
     {
       "name": "WD Blue 500GB",
-      "price": 55,
+      "price": 65,
       "type": "HDD",
       "read": "150MB/s",
       "write": "140MB/s",
@@ -888,7 +954,7 @@
     },
     {
       "name": "WD Blue 1TB",
-      "price": 55,
+      "price": 72,
       "type": "HDD",
       "read": "150MB/s",
       "write": "140MB/s",
@@ -896,7 +962,7 @@
     },
     {
       "name": "Samsung 860 EVO 500GB",
-      "price": 70,
+      "price": 120,
       "type": "SSD SATA",
       "read": "550MB/s",
       "write": "520MB/s",
@@ -904,7 +970,7 @@
     },
     {
       "name": "Crucial P2 500GB",
-      "price": 65,
+      "price": 105,
       "type": "SSD NVMe",
       "read": "2400MB/s",
       "write": "1800MB/s",
@@ -912,7 +978,7 @@
     },
     {
       "name": "Crucial P5 1TB",
-      "price": 140,
+      "price": 180,
       "type": "SSD NVMe",
       "read": "3400MB/s",
       "write": "3000MB/s",
@@ -920,7 +986,7 @@
     },
     {
       "name": "Samsung 970 EVO 500GB",
-      "price": 90,
+      "price": 150,
       "type": "SSD NVMe",
       "read": "3500MB/s",
       "write": "3000MB/s",
@@ -928,7 +994,7 @@
     },
     {
       "name": "Kingston A2000 500GB",
-      "price": 55,
+      "price": 100,
       "type": "SSD NVMe",
       "read": "2200MB/s",
       "write": "2000MB/s",
@@ -936,7 +1002,7 @@
     },
     {
       "name": "WD SN550 1TB",
-      "price": 110,
+      "price": 150,
       "type": "SSD NVMe",
       "read": "2400MB/s",
       "write": "1950MB/s",
@@ -944,7 +1010,7 @@
     },
     {
       "name": "Crucial BX500 500GB",
-      "price": 50,
+      "price": 95,
       "type": "SSD SATA",
       "read": "540MB/s",
       "write": "500MB/s",
@@ -952,7 +1018,7 @@
     },
     {
       "name": "Samsung 870 EVO 1TB",
-      "price": 105,
+      "price": 175,
       "type": "SSD SATA",
       "read": "560MB/s",
       "write": "530MB/s",
@@ -960,7 +1026,7 @@
     },
     {
       "name": "Seagate Barracuda 1TB",
-      "price": 50,
+      "price": 70,
       "type": "HDD",
       "read": "150MB/s",
       "write": "140MB/s",
@@ -968,7 +1034,7 @@
     },
     {
       "name": "WD Black SN750 500GB",
-      "price": 90,
+      "price": 145,
       "type": "SSD NVMe",
       "read": "3470MB/s",
       "write": "3000MB/s",
@@ -976,7 +1042,7 @@
     },
     {
       "name": "Crucial P1 1TB",
-      "price": 100,
+      "price": 140,
       "type": "SSD NVMe",
       "read": "2000MB/s",
       "write": "1700MB/s",
@@ -984,7 +1050,7 @@
     },
     {
       "name": "Samsung 980 1TB",
-      "price": 140,
+      "price": 180,
       "type": "SSD NVMe",
       "read": "3500MB/s",
       "write": "3000MB/s",
@@ -992,7 +1058,7 @@
     },
     {
       "name": "WD Blue SN570 1TB",
-      "price": 105,
+      "price": 150,
       "type": "SSD NVMe",
       "read": "3500MB/s",
       "write": "3000MB/s",
@@ -1040,7 +1106,7 @@
     },
     {
       "name": "Corsair MP700 Pro 2TB",
-      "price": 195,
+      "price": 560,
       "type": "SSD NVMe Gen5",
       "read": "14000MB/s",
       "write": "12000MB/s",
@@ -1048,11 +1114,35 @@
     },
     {
       "name": "Crucial T710 1TB",
-      "price": 140,
+      "price": 240,
       "type": "SSD NVMe Gen5",
       "read": "14500MB/s",
       "write": "13500MB/s",
       "img": "https://c1.neweggimages.com/productimage/nb640/20-156-443-01.jpg"
+    },
+    {
+      "name": "KingSpec 128GB 2.5\" SATA III SSD",
+      "price": 26,
+      "type": "SSD SATA",
+      "read": "550MB/s",
+      "write": "520MB/s",
+      "img": "https://i5.walmartimages.com/seo/KingSpec-128GB-2-5-SSD-SATA-III-6Gb-s_eb12d991-ac34-40a0-a178-a742cfc4bddc.d4efd2e6774187746733c8d474e36045.jpeg"
+    },
+    {
+      "name": "KingSpec NX-128 128GB M.2 NVMe SSD",
+      "price": 42,
+      "type": "SSD NVMe",
+      "read": "2200MB/s",
+      "write": "800MB/s",
+      "img": "https://c1.neweggimages.com/ProductImage/B1V8S2512120JXRXY2A.jpg"
+    },
+    {
+      "name": "Seagate BarraCuda 250GB HDD",
+      "price": 48,
+      "type": "HDD",
+      "read": "100MB/s",
+      "write": "95MB/s",
+      "img": "https://c1.neweggimages.com/productimage/nb640/22-148-144-02.jpg"
     }
   ],
   "PSU": [
@@ -1072,14 +1162,14 @@
     },
     {
       "name": "EVGA 550W",
-      "price": 60,
+      "price": 100,
       "watt": "550W",
       "rating": "80+ Bronze",
       "img": "https://c1.neweggimages.com/ProductImage/AR12S21122607FH2MD5.jpg"
     },
     {
       "name": "EVGA 650W",
-      "price": 90,
+      "price": 195,
       "watt": "650W",
       "rating": "80+ Gold",
       "img": "https://c1.neweggimages.com/productimage/nb640/1HU-00J7-004V5-S03.jpg"
@@ -1107,14 +1197,14 @@
     },
     {
       "name": "Corsair RM650",
-      "price": 110,
+      "price": 165,
       "watt": "650W",
       "rating": "80+ Gold",
       "img": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Power-Supply-Units/CP-9020194-NA/Gallery/RM650_01.webp"
     },
     {
       "name": "EVGA 700W",
-      "price": 120,
+      "price": 260,
       "watt": "700W",
       "rating": "80+ Gold",
       "img": "https://c1.neweggimages.com/productimage/nb640/1HU-00J7-004V2-V01.jpg"
@@ -1156,7 +1246,7 @@
     },
     {
       "name": "Corsair CX750",
-      "price": 120,
+      "price": 60,
       "watt": "750W",
       "rating": "80+ Bronze",
       "img": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Power-Supply-Units/CP-9020123-NA/Gallery/CX750_01.webp"
@@ -1177,7 +1267,7 @@
     },
     {
       "name": "EVGA Supernova 850W",
-      "price": 175,
+      "price": 425,
       "watt": "850W",
       "rating": "80+ Platinum",
       "img": "https://i5.walmartimages.com/seo/EVGA-SuperNOVA-850-G7-220-G7-0850-X1-850-W-ATX12V-EPS12V-SLI-CrossFire-80-PLUS-GOLD-Certified-Full-Modular-Active-PFC-Power-Supply_51db0c4a-b16a-46c7-9705-dfba59a3c9d5.3e41f716c7661891b4fef3a58d6e8586.jpeg"
@@ -1205,16 +1295,37 @@
     },
     {
       "name": "be quiet! Dark Power 13 1300W",
-      "price": 320,
+      "price": 400,
       "watt": "1300W",
       "rating": "80+ Titanium",
       "img": "https://c1.neweggimages.com/productimage/nb640/A68VS2305100X28CPC9.jpg"
+    },
+    {
+      "name": "Cooler Master Elite RS400-PSARJ3-US 400W",
+      "price": 40,
+      "watt": "400W",
+      "rating": "None",
+      "img": "https://c1.neweggimages.com/productimage/nb640/BA1GD2203110DORV126.jpg"
+    },
+    {
+      "name": "Thermaltake Smart 500W",
+      "price": 40,
+      "watt": "500W",
+      "rating": "80+ White",
+      "img": "https://c1.neweggimages.com/productimage/nb300/17-153-233-01.jpg"
+    },
+    {
+      "name": "RAIDMAX Cobra 650W",
+      "price": 45,
+      "watt": "650W",
+      "rating": "80+ Gold",
+      "img": "https://c1.neweggimages.com/productimage/nb640/BNFDS2411040DYSVA3E.jpg"
     }
   ],
   "Case": [
     {
       "name": "Cooler Master Q300L",
-      "price": 55,
+      "price": 40,
       "img": "https://c1.neweggimages.com/ProductImage/11-119-331-V31.jpg"
     },
     {
@@ -1311,6 +1422,21 @@
       "name": "Phanteks Evolv X",
       "price": 240,
       "img": "https://c1.neweggimages.com/ProductImage/11-854-077-V20.jpg"
+    },
+    {
+      "name": "Zalman T6 MINI",
+      "price": 30,
+      "img": "https://c1.neweggimages.com/productimage/nb640/ABW9S2606041F7BRV5D.jpg"
+    },
+    {
+      "name": "DIYPC DIY-S05-BK",
+      "price": 36,
+      "img": "https://c1.neweggimages.com/productimage/nb640/11-353-265-01.jpg"
+    },
+    {
+      "name": "Thermaltake Versa H17",
+      "price": 50,
+      "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6353/6353123cv11d.jpg"
     }
   ],
   "Cooler": [
@@ -1372,7 +1498,7 @@
     },
     {
       "name": "Thermaltake UX200",
-      "price": 40,
+      "price": 30,
       "type": "Air",
       "rpm": "2000",
       "img": "https://thermaltakeusa.com/cdn/shop/files/ux20001_24c67efc-2b2f-4af4-854b-51ebd902906c.jpg?v=1691161582"
@@ -1453,6 +1579,27 @@
       "type": "Liquid",
       "rpm": "2400",
       "img": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Liquid-Cooling/base-icue-elite-cooler-config/Gallery/H150i_ELITE_CAPELLIX_01.webp"
+    },
+    {
+      "name": "AMD Wraith Stealth",
+      "price": 13,
+      "type": "Air",
+      "rpm": "2800",
+      "img": "https://us.computerorbit.com/cdn/shop/products/618YJWy-HLL._AC_SL1050_720x700.jpg?v=1641899640"
+    },
+    {
+      "name": "Vetroo V5",
+      "price": 25,
+      "type": "Air",
+      "rpm": "1700",
+      "img": "https://cdn.shopify.com/s/files/1/0400/9266/3973/files/1600X1600nw-2_01_3416e90d-f98c-4547-ae33-c712f42da036.jpg?v=1723619513"
+    },
+    {
+      "name": "ID-COOLING SE-214-XT ARGB",
+      "price": 17,
+      "type": "Air",
+      "rpm": "1500",
+      "img": "https://static.idcooling.com/file/image/20211123/20211123150705_66328.jpg"
     }
   ]
 }
