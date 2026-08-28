@@ -479,13 +479,15 @@ button { font-family: inherit; cursor: pointer; }
   opacity: 0.6;
 }
 
-.rig-part .remove {
+/* base look for every remove button, .rig-part's or the case's — a bare
+   class selector so it applies no matter what the button's parent is */
+.remove {
   position: absolute;
   top: -6px;
   right: -6px;
   width: 18px;
   height: 18px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -496,7 +498,19 @@ button { font-family: inherit; cursor: pointer; }
   cursor: pointer;
   z-index: 5;
 }
-.rig-part .remove:hover { color: var(--danger); border-color: var(--danger); }
+/* only clickable once a part actually occupies the slot */
+.rig-part.filled .remove { display: flex; }
+.remove:hover { color: var(--danger); border-color: var(--danger); }
+
+/* the case's remove button lives directly on .rig-case, not inside a
+   .rig-part, so it needs its own position override (top-right corner,
+   mirroring .case-tag's top-left placement) and its own filled-check */
+.case-remove {
+  top: -12px;
+  right: 16px;
+  left: auto;
+}
+.rig-case.filled .case-remove { display: flex; }
 
 /* ── details / info panel ── */
 .details-empty { color: var(--ink-soft); font-size: 0.85rem; font-style: italic; }
