@@ -1,10 +1,3 @@
-// PC Builder — frontend logic
-// This file is intentionally empty of real logic. It's just the wiring:
-// the DOM references you'll need, and a TODO per piece of behavior,
-// in roughly the order you'll want to build them. Write the actual
-// bodies yourself.
-
-// ── DOM references, one per element the HTML already has ──
 const categoryButtons = document.getElementById('categoryButtons');
 const partsList = document.getElementById('partsList');
 const buildSlots = document.getElementById('buildSlots');
@@ -27,10 +20,10 @@ const resetBtn = document.getElementById('resetBtn');
 const skipLevelBtn = document.getElementById('skipLevelBtn');
 
 // ── state you'll need to track somewhere ──
-let parts = null;        // filled in once GET /api/parts resolves
+let parts = null;
 let activeCategory = null;
-let selectedPart = null; // { category, part } currently shown in the details panel
-let configuration = {};  // { CPU: {...}, GPU: {...}, ... } — the actual build
+let selectedPart = null;
+let configuration = {}; 
 
 async function loadParts() {
     const response = await fetch('/api/parts') 
@@ -43,12 +36,7 @@ async function loadParts() {
     activeCategory = Object.keys(parts)[0]
     renderParts(activeCategory)
     console.log(data)
-
-
-
 }
-
-
 
 function renderParts(category) {
     partsList.innerHTML = "";
@@ -69,8 +57,6 @@ function renderParts(category) {
     })
 
 }
-// TODO: category button click -> set activeCategory, toggle .active class,
-// call renderParts() for the new category.
 function selectCategory(category) {
     activeCategory = category;
     document.querySelectorAll('.category-btn').forEach(btn => {
@@ -84,8 +70,11 @@ categoryButtons.addEventListener("click", (event) => {
     if (!button) return;
     selectCategory(button.dataset.category)
 })
+addPartBtn.addEventListener("click", () => {
+    addToBuild()
+})
 
-// TODO: part card click -> set selectedPart, fill in #partDetails, show #addPartBtn.
+
 function showPartDetails(category, part) {
 
     let html = `<div class="detail-row"><span class="k">Name</span><span class="v">${part.name}</span></div>`
@@ -108,19 +97,49 @@ function showPartDetails(category, part) {
     if (part.img) {
         html += `<img src="${part.img}" alt="${part.name}" style="width:100%; margin-top:8px; border-radius:6px;">`
     }
+    addPartBtn.style.display = "flex"
     partDetails.innerHTML = html;
 }
 
-// TODO: "add to build" click -> put selectedPart into configuration[category],
-// then re-render the matching .rig-part inside #buildSlots (add .filled, set its
-// --cat custom property if you want per-category coloring beyond CSS defaults,
-// update .rig-label text, and wire up its remove button). If category is "Case",
-// also toggle .filled on #buildSlots itself and update #caseTag's text.
-function addToBuild() {}
+function addToBuild() {
+    if (!selectedPart) return;
 
-// TODO: remove button on a filled slot -> delete configuration[category],
-// re-render that slot back to empty.
-function removeFromBuild(category) {}
+    configuration[selectedPart.category] = selectedPart.part
+    console.log(configuration)
+
+    if (selectedPart.category !== "Case") {
+        const target = buildSlots.querySelector(`.rig-part[data-category="${selectedPart.category}"]`)
+        target.classList.add('filled')
+        target.querySelector('.rig-label').textContent = selectedPart.part.name
+    } else {
+        buildSlots.classList.add('filled')
+        caseTag.textContent = selectedPart.part.name
+    }
+}
+buildSlots.addEventListener("click", (event) => {
+    const button = event.target.closest(".remove")
+    if (!button) return
+    if (button.id === "caseRemoveBtn") {
+        removeFromBuild("Case")
+    } else {
+        const part = button.closest(".rig-part")
+        removeFromBuild(part.dataset.category)
+    }
+})
+
+
+function removeFromBuild(category) {
+    if (category !== "Case") {
+        const target = buildSlots.querySelector(`.rig-part[data-category="${category}"]`)
+        target.querySelector('.rig-label').textContent = category
+        target.classList.remove('filled') 
+        delete configuration[category]
+    } else {
+        buildSlots.classList.remove('filled')
+        caseTag.textContent = "Case"
+        delete configuration[category]
+    }
+}
 
 // TODO: recalculate the total from `configuration`, update #totalValue,
 // and toggle a class on #totalStat (e.g. "over" / "close") based on budget.
