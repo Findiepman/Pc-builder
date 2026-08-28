@@ -18,15 +18,23 @@ const sortDesc = document.getElementById('sortDesc');
 const checkBuildBtn = document.getElementById('checkBuildBtn');
 const resetBtn = document.getElementById('resetBtn');
 const skipLevelBtn = document.getElementById('skipLevelBtn');
+const checkModalOverlay = document.getElementById("checkModalOverlay")
+const checkModal = document.getElementById("checkModal")
+const modalText = document.getElementById("modalMessage")
+const modalMissing = document.getElementById("modalMissing")
+const modalBtn = document.getElementById("modalOkBtn")
+const modalTitle = document.getElementById("modalTitle")
 
-// ── state you'll need to track somewhere ──
+
 let parts = null;
 let activeCategory = null;
 let selectedPart = null;
+let buildPassed = false
 let configuration = {}; 
 let levels = null;
 let usedLevels = []
 let currentBudget = null;
+let price = 0
 
 async function loadParts() {
     const response = await fetch('/api/parts') 
@@ -70,6 +78,31 @@ function pickLevel() {
     }
     usedLevels.push(chosenLevel)
     return chosenLevel
+}
+
+function startlevel() {
+    resetConfiguration()
+    updateTotal()
+    const index = pickLevel()
+    const index1 = levels[index]
+    currentBudget = Number(index1.Budget.replace('$', ''))
+    goalText.textContent = index1.Goal
+    budgetValue.textContent = index1.Budget
+    levelValue.textContent = index1.Level
+}
+
+function resetConfiguration() {
+    configuration = {}
+    price = 0
+    const parts = buildSlots.querySelectorAll('.rig-part')
+    parts.forEach(part => {
+        part.querySelector('.rig-label').textContent = part.dataset.category
+        part.classList.remove('filled')
+    })
+    buildSlots.classList.remove('filled')
+    caseTag.textContent = "Case"
+    modalBtn.textContent = "Got it"
+
 }
 
 function renderParts(category) {
@@ -177,10 +210,9 @@ function removeFromBuild(category) {
     updateTotal()
 }
 
-// TODO: recalculate the total from `configuration`, update #totalValue,
-// and toggle a class on #totalStat (e.g. "over" / "close") based on budget.
+
 function updateTotal() {
-    let price = 0
+    price = 0
     Object.values(configuration).forEach(part => {
         price += part.price 
     })
@@ -189,6 +221,77 @@ function updateTotal() {
     totalValue.textContent = `$${price}`
 
 }
+
+function checkBuild() {
+    buildPassed = false
+    price = 0
+    Object.values(configuration).forEach(part => {
+        price += part.price 
+    })
+    const allCategories = ["CPU", "RAM", "Cooler", "Storage", "Case", "PSU", "GPU", "Motherboard"]
+    const missing = allCategories.filter(f => !Object.keys(configuration).includes(f))
+
+    const passed = missing.length === 0 && price <= currentBudget
+    if (passed) { 
+        modalBtn.textContent = "Next Level"
+        buildPassed = true
+    }
+    checkModal.classList.toggle('success', passed)
+    checkModal.classList.toggle('fail', !passed)
+
+    modalTitle.textContent = passed ? "Build approved!" : "Not quite there!"
+    modalText.textContent = passed ? "You have completed the build!" : "You are still missing these components!"
+    modalMissing.innerHTML = ""
+    missing.forEach(category => {
+        const card = document.createElement("li")
+        card.textContent = category
+        modalMissing.appendChild(card)
+    })
+
+    checkModalOverlay.classList.add('open')
+
+
+        
+}
+modalBtn.addEventListener("click", () => {
+    if (buildPassed) {
+        checkModalOverlay.classList.remove('open')
+        startlevel()
+    } else {
+        checkModalOverlay.classList.remove('open')
+    }
+    
+})
+
+
+
+function sortPrice(type) {
+    if (type == "asc") {
+    parts[activeCategory].sort((a, b) => a.price - b.price)
+    } else if (type == "desc") {
+        parts[activeCategory].sort((a, b) => b.price - a.price)
+    }
+    sortMenu.classList.toggle('open')
+    renderParts(activeCategory)
+}
+sortAsc.addEventListener("click", () => {sortPrice("asc")})
+sortDesc.addEventListener("click", () => {sortPrice("desc")})
+
+sortBtn.addEventListener("click", () => {
+    sortMenu.classList.toggle('open')
+})
+resetBtn.addEventListener("click", () => {resetConfiguration; updateTotal})
+checkBuildBtn.addEventListener("click", checkBuild)
+document.getElementById("modalCloseBtn").addEventListener("click", () => {checkModal.classList.remove('open')})
+document.getElementById("modalCloseBtn").addEventListener("click", () => {checkModal.classList.remove('open')})
+checkModal.addEventListener('click', (e) => {
+    let clickInside = document.getElementById("checkModal").contains(e.target)
+  
+    if (!clickInside) {
+       checkModal.classList.remove('open')
+    }
+})
+
 
 // TODO: sort button toggles #sortMenu open/closed; sortAsc/sortDesc re-sort
 // the currently active category's parts and re-render.

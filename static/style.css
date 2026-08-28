@@ -415,15 +415,18 @@ button { font-family: inherit; cursor: pointer; }
 .rig-part[data-category="RAM"] .rig-shape { border-radius: 4px; }
 
 /* two M.2 slots, silkscreened onto the board itself between the CPU and
-   the PCIe slot below — right where they sit on a real board. Decorative
-   case detail, not a buildable part: an M.2 SSD you add still lives under
-   the Storage category/cage below. */
+   the PCIe slot below — right where they sit on a real board. An NVMe
+   drive from the Storage category should land on one of these (JS decides
+   which target based on the part's `type`); a SATA/HDD drive still goes
+   in the drive cage below instead. .filled uses the storage accent color
+   so it reads as "this is storage", not motherboard, once occupied. */
 .m2-slot {
   position: absolute;
   top: 44%; left: 42%; width: 15%; height: 4.5%;
   border: 2px dashed color-mix(in srgb, var(--c-mobo) 65%, var(--line-strong));
   border-radius: 3px;
   background: color-mix(in srgb, var(--c-mobo) 20%, white);
+  transition: border-color 0.2s, background 0.2s;
 }
 .m2-slot::after {
   content: "";
@@ -435,6 +438,12 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 2px;
 }
 .m2-slot.m2-slot-2 { top: 51.5%; }
+.m2-slot.filled {
+  border-style: solid;
+  border-color: var(--c-storage);
+  background: color-mix(in srgb, var(--c-storage) 30%, white);
+}
+.m2-slot.filled::after { background: var(--c-storage); }
 
 /* drive cage: front-left bay, low in the case, clear of the motherboard
    footprint entirely — this is dedicated case space, not part of the board. */
