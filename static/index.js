@@ -174,7 +174,10 @@ function addToBuild() {
     configuration[selectedPart.category] = selectedPart.part
     console.log(configuration)
 
-    if (selectedPart.category !== "Case") {
+    if (selectedPart.category === "Storage" && selectedPart.part.type.includes("NVMe")){
+        const storage = buildSlots.querySelector('.m2-slot')
+        storage.classList.add('filled')
+    } else if (selectedPart.category !== "Case"){
         const target = buildSlots.querySelector(`.rig-part[data-category="${selectedPart.category}"]`)
         target.classList.add('filled')
         target.querySelector('.rig-label').textContent = selectedPart.part.name
@@ -184,6 +187,7 @@ function addToBuild() {
     }
     updateTotal()
 }
+
 buildSlots.addEventListener("click", (event) => {
     const button = event.target.closest(".remove")
     if (!button) return
@@ -197,7 +201,13 @@ buildSlots.addEventListener("click", (event) => {
 
 
 function removeFromBuild(category) {
-    if (category !== "Case") {
+    const isNvme = category === "Storage" && configuration[category].type.includes("NVMe")
+    if (isNvme) {
+        const storage = buildSlots.querySelector('.m2-slot')
+        storage.classList.remove('filled')
+        delete configuration[category]
+    }
+    else if (category !== "Case") {
         const target = buildSlots.querySelector(`.rig-part[data-category="${category}"]`)
         target.querySelector('.rig-label').textContent = category
         target.classList.remove('filled') 
