@@ -73,13 +73,28 @@
           <div class="slot-brackets" aria-hidden="true"></div>
 
           <div class="rig-part" data-category="Motherboard">
-            <div class="rig-shape">
-              <div class="m2-slot"></div>
-              <div class="m2-slot m2-slot-2"></div>
-            </div>
+            <div class="rig-shape"></div>
             <span class="rig-label">Motherboard</span>
             <button class="remove" aria-label="Remove part">×</button>
           </div>
+
+          <!-- M.2 slots: positioned directly on the buildSlots grid (same
+               coordinate space as CPU/RAM/GPU below), in the free strip of
+               board between the CPU and the PCIe/GPU slot — not nested
+               inside Motherboard's own box, so their placement doesn't
+               depend on Motherboard's internal layout at all. Shape on
+               top, label below, same convention as every other slot. -->
+          <div class="m2-part" data-slot="M2-1">
+            <div class="m2-slot"></div>
+            <span class="rig-label">M.2 Slot 1</span>
+            <button class="remove" aria-label="Remove drive">×</button>
+          </div>
+          <div class="m2-part" data-slot="M2-2">
+            <div class="m2-slot"></div>
+            <span class="rig-label">M.2 Slot 2</span>
+            <button class="remove" aria-label="Remove drive">×</button>
+          </div>
+
           <div class="rig-part" data-category="CPU">
             <div class="rig-shape"></div>
             <span class="rig-label">CPU</span>

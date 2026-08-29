@@ -340,7 +340,9 @@ button { font-family: inherit; cursor: pointer; }
   background: transparent;
   transition: border-color 0.2s, background 0.2s;
 }
-.rig-part .rig-label {
+/* bare selector (not scoped to .rig-part) so .m2-part's label picks up
+   the exact same sizing/truncation without duplicating it */
+.rig-label {
   font-size: 0.6rem;
   font-weight: 700;
   text-align: center;
@@ -414,17 +416,35 @@ button { font-family: inherit; cursor: pointer; }
 .rig-part[data-category="RAM"]         { --cat: var(--c-ram);    top: 9%;  left: 80%; width: 8%;  height: 36%; z-index: 2; }
 .rig-part[data-category="RAM"] .rig-shape { border-radius: 4px; }
 
-/* two M.2 slots, silkscreened onto the board itself between the CPU and
-   the PCIe slot below — right where they sit on a real board. An NVMe
-   drive from the Storage category should land on one of these (JS decides
-   which target based on the part's `type`); a SATA/HDD drive still goes
-   in the drive cage below instead. .filled uses the storage accent color
-   so it reads as "this is storage", not motherboard, once occupied. */
-.m2-slot {
+/* two independent M.2 slots, in the free strip of board between the CPU
+   (ends ~37%) and the PCIe/GPU slot (starts 58%), clear of RAM's column
+   (starts 80%) too. Positioned directly in buildSlots' own coordinate
+   space — like CPU/RAM/GPU/etc below, NOT nested inside Motherboard's box
+   — so their placement can be reasoned about against those other parts
+   directly instead of through Motherboard's internal layout.
+   Each .m2-part is its own buildable target (data-slot="M2-1"/"M2-2"),
+   separate from the "Storage" drive cage: an NVMe drive from the Storage
+   category can land on either one, a SATA/HDD drive still goes in the
+   cage instead. Shape on top, label below, same convention as every
+   other slot (.rig-part) — .filled still lands on .m2-slot itself (JS
+   already targets that), the label/remove-button reveal follow it via
+   the general sibling combinator. */
+.m2-part {
   position: absolute;
-  top: 44%; left: 42%; width: 15%; height: 4.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 3px;
+  z-index: 2;
+}
+.m2-part[data-slot="M2-1"] { top: 39%;   left: 40%; width: 36%; height: 7.5%; }
+.m2-part[data-slot="M2-2"] { top: 48.5%; left: 40%; width: 36%; height: 7.5%; }
+
+.m2-slot {
+  position: relative;
+  flex: 1;
   border: 2px dashed color-mix(in srgb, var(--c-mobo) 65%, var(--line-strong));
-  border-radius: 3px;
+  border-radius: 4px;
   background: color-mix(in srgb, var(--c-mobo) 20%, white);
   transition: border-color 0.2s, background 0.2s;
 }
@@ -432,18 +452,19 @@ button { font-family: inherit; cursor: pointer; }
   content: "";
   position: absolute;
   top: 50%; left: -6%;
-  width: 10%; height: 40%;
+  width: 8%; height: 45%;
   transform: translateY(-50%);
   background: color-mix(in srgb, var(--c-mobo) 65%, var(--line-strong));
   border-radius: 2px;
 }
-.m2-slot.m2-slot-2 { top: 51.5%; }
 .m2-slot.filled {
   border-style: solid;
   border-color: var(--c-storage);
   background: color-mix(in srgb, var(--c-storage) 30%, white);
 }
 .m2-slot.filled::after { background: var(--c-storage); }
+.m2-slot.filled ~ .rig-label { color: var(--ink); }
+.m2-slot.filled ~ .remove { display: flex; }
 
 /* drive cage: front-left bay, low in the case, clear of the motherboard
    footprint entirely — this is dedicated case space, not part of the board. */
