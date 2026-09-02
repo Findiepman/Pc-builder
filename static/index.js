@@ -30,14 +30,14 @@ let parts = null;
 let activeCategory = null;
 let selectedPart = null;
 let buildPassed = false
-let configuration = {}; 
+let configuration = {};
 let levels = null;
 let usedLevels = []
 let currentBudget = null;
 let price = 0
 
 async function loadParts() {
-    const response = await fetch('/api/parts') 
+    const response = await fetch('/api/parts')
     if (!response.ok) {
         console.error('parts request failed', response.status)
         return;
@@ -130,7 +130,7 @@ function selectCategory(category) {
         btn.classList.toggle('active', btn.dataset.category === category);
     });
     renderParts(activeCategory)
-}   
+}
 
 categoryButtons.addEventListener("click", (event) => {
     const button = event.target.closest(".category-btn");
@@ -168,53 +168,98 @@ function showPartDetails(category, part) {
     partDetails.innerHTML = html;
 }
 
+function pickm2Slot() {
+    const slot1 = buildSlots.querySelector('.m2-part[data-slot="M2-1"] .m2-slot')
+    const slot2 = buildSlots.querySelector('.m2-part[data-slot="M2-2"] .m2-slot')
+
+    if (!slot1.classList.contains('filled')) {
+        return slot1
+    } else if (!slot2.classList.contains('filled')) {
+        return slot2
+    } else {
+        return slot1
+    }
+}
+
+
 function addToBuild() {
     if (!selectedPart) return;
 
-    configuration[selectedPart.category] = selectedPart.part
-    console.log(configuration)
+    const isNvme = selectedPart.category === "Storage" && selectedPart.part.type.includes("NVMe")
 
-    if (selectedPart.category === "Storage" && selectedPart.part.type.includes("NVMe")){
-        const storage = buildSlots.querySelector('.m2-slot')
+    if (isNvme) {
+        const storage = pickm2Slot()
         storage.classList.add('filled')
-    } else if (selectedPart.category !== "Case"){
+        storage.closest('.m2-part').querySelector('.rig-label').textContent = selectedPart.part.name
+        configuration["Storage-NVMe" + storage.closest('.m2-part').dataset.slot] = selectedPart.part
+    }
+    else if (selectedPart.category === "Storage") {
         const target = buildSlots.querySelector(`.rig-part[data-category="${selectedPart.category}"]`)
         target.classList.add('filled')
         target.querySelector('.rig-label').textContent = selectedPart.part.name
-    } else {
+        configuration["Storage-SATA"] = selectedPart.part
+    }
+    else if (selectedPart.category === "Case") {
         buildSlots.classList.add('filled')
         caseTag.textContent = selectedPart.part.name
+        configuration["Case"] = selectedPart.part
+    } else {
+        const target = buildSlots.querySelector(`.rig-part[data-category="${selectedPart.category}"]`)
+        target.classList.add('filled')
+        target.querySelector('.rig-label').textContent = selectedPart.part.name
+        configuration[selectedPart.category] = selectedPart.part
     }
     updateTotal()
 }
-
 buildSlots.addEventListener("click", (event) => {
     const button = event.target.closest(".remove")
     if (!button) return
     if (button.id === "caseRemoveBtn") {
         removeFromBuild("Case")
-    } else {
+    } else if (button.closest('.m2-part')) {
+        const slotId = button.closest('.m2-part').dataset.slot
+        removeFromBuild("Storage-NVMe" + slotId)
+    }
+
+    else {
         const part = button.closest(".rig-part")
-        removeFromBuild(part.dataset.category)
+        if (part.dataset.category === "Storage") {
+            removeFromBuild("Storage-SATA")
+
+        } else {
+            removeFromBuild(part.dataset.category)
+        }
     }
 })
 
 
 function removeFromBuild(category) {
-    const isNvme = category === "Storage" && configuration[category].type.includes("NVMe")
-    if (isNvme) {
-        const storage = buildSlots.querySelector('.m2-slot')
-        storage.classList.remove('filled')
+    if (category.startsWith("Storage-NVMe")) {
+        const slot = category.replace("Storage-NVMe", "")
+        const target = buildSlots.querySelector(`.m2-part[data-slot="${slot}"] .m2-slot`)
+        target.classList.remove('filled')
+        if (slot == "M2-2") {
+        target.closest('.m2-part').querySelector('.rig-label').textContent = "M.2 Slot 2"
+        } else if (slot == "M2-1") {
+            target.closest('.m2-part').querySelector('.rig-label').textContent = "M.2 Slot 1" 
+        }
+        delete configuration[category]
+
+    } else if (category === "Storage-SATA") {
+        const target = buildSlots.querySelector(`.rig-part[data-category="Storage"]`)
+        target.classList.remove('filled')
+        target.querySelector('.rig-label').textContent = "Storage"
         delete configuration[category]
     }
-    else if (category !== "Case") {
-        const target = buildSlots.querySelector(`.rig-part[data-category="${category}"]`)
-        target.querySelector('.rig-label').textContent = category
-        target.classList.remove('filled') 
-        delete configuration[category]
-    } else {
+    else if (category === "Case") {
         buildSlots.classList.remove('filled')
         caseTag.textContent = "Case"
+        delete configuration[category]
+    } else {
+
+        const target = buildSlots.querySelector(`.rig-part[data-category="${category}"]`)
+        target.querySelector('.rig-label').textContent = category
+        target.classList.remove('filled')
         delete configuration[category]
     }
     updateTotal()
@@ -224,7 +269,7 @@ function removeFromBuild(category) {
 function updateTotal() {
     price = 0
     Object.values(configuration).forEach(part => {
-        price += part.price 
+        price += part.price
     })
     totalStat.classList.toggle('over', price > currentBudget)
     totalStat.classList.toggle('close', price >= currentBudget * 0.9 && price <= currentBudget)
@@ -236,13 +281,13 @@ function checkBuild() {
     buildPassed = false
     price = 0
     Object.values(configuration).forEach(part => {
-        price += part.price 
+        price += part.price
     })
     const allCategories = ["CPU", "RAM", "Cooler", "Storage", "Case", "PSU", "GPU", "Motherboard"]
     const missing = allCategories.filter(f => !Object.keys(configuration).includes(f))
 
     const passed = missing.length === 0 && price <= currentBudget
-    if (passed) { 
+    if (passed) {
         modalBtn.textContent = "Next Level"
         buildPassed = true
     }
@@ -261,7 +306,7 @@ function checkBuild() {
     checkModalOverlay.classList.add('open')
 
 
-        
+
 }
 modalBtn.addEventListener("click", () => {
     if (buildPassed) {
@@ -270,35 +315,35 @@ modalBtn.addEventListener("click", () => {
     } else {
         checkModalOverlay.classList.remove('open')
     }
-    
+
 })
 
 
 
 function sortPrice(type) {
     if (type == "asc") {
-    parts[activeCategory].sort((a, b) => a.price - b.price)
+        parts[activeCategory].sort((a, b) => a.price - b.price)
     } else if (type == "desc") {
         parts[activeCategory].sort((a, b) => b.price - a.price)
     }
     sortMenu.classList.toggle('open')
     renderParts(activeCategory)
 }
-sortAsc.addEventListener("click", () => {sortPrice("asc")})
-sortDesc.addEventListener("click", () => {sortPrice("desc")})
+sortAsc.addEventListener("click", () => { sortPrice("asc") })
+sortDesc.addEventListener("click", () => { sortPrice("desc") })
 
 sortBtn.addEventListener("click", () => {
     sortMenu.classList.toggle('open')
 })
-resetBtn.addEventListener("click", () => {resetConfiguration; updateTotal})
+resetBtn.addEventListener("click", () => { resetConfiguration; updateTotal })
 checkBuildBtn.addEventListener("click", checkBuild)
-document.getElementById("modalCloseBtn").addEventListener("click", () => {checkModal.classList.remove('open')})
-document.getElementById("modalCloseBtn").addEventListener("click", () => {checkModal.classList.remove('open')})
+document.getElementById("modalCloseBtn").addEventListener("click", () => { checkModal.classList.remove('open') })
+document.getElementById("modalCloseBtn").addEventListener("click", () => { checkModal.classList.remove('open') })
 checkModal.addEventListener('click', (e) => {
     let clickInside = document.getElementById("checkModal").contains(e.target)
-  
+
     if (!clickInside) {
-       checkModal.classList.remove('open')
+        checkModal.classList.remove('open')
     }
 })
 
